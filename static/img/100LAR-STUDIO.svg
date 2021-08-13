@@ -1,0 +1,44 @@
+<svg width="500.00000000000006" height="200" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <defs>
+  <filter id="svg_14_blur">
+   <feGaussianBlur stdDeviation="0"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="502" height="202" id="canvas_background" fill="#333336"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#808080" stroke-width="1.5" x="83.518891" y="55.015851" width="20.999999" height="88.999995" id="svg_2" stroke="#808080"/>
+  <ellipse fill="#808080" stroke="#808080" stroke-width="1.5" cx="145.01889" cy="98.515839" id="svg_3" rx="45.5" ry="45.5"/>
+  <ellipse fill="#808080" stroke="#808080" stroke-width="1.5" cx="214.01889" cy="98.515839" id="svg_5" rx="45.5" ry="45.5"/>
+  <rect fill="#808080" stroke-width="1.5" x="253.01889" y="55.015842" width="21" height="89" id="svg_6" stroke="#808080"/>
+  <ellipse fill="#808080" stroke="#808080" stroke-width="1.5" cx="314.01889" cy="98.515839" id="svg_9" rx="45.5" ry="45.5"/>
+  <rect fill="#808080" stroke-width="1.5" stroke-opacity="null" x="342.51889" y="105.015839" width="17" height="39" id="svg_10" stroke="#808080"/>
+  <ellipse fill="#808080" stroke-width="1.5" cx="389.01889" cy="98.515839" id="svg_11" rx="45.5" ry="45.5" stroke="#808080"/>
+  <rect fill="#808080" stroke-width="1.5" stroke-opacity="null" x="350.018876" y="105.015839" width="17" height="39" id="svg_12" stroke="#808080"/>
+  <rect fill="#808080" stroke-width="1.5" stroke-opacity="null" x="411.51889" y="104.031616" width="21" height="39" id="svg_13" stroke="#808080" transform="rotate(-31 422.0188598632812,123.53161621093744) "/>
+  <ellipse fill="#333336" stroke="#808080" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" cx="143.51889" cy="99.015839" id="svg_16" rx="21" ry="21"/>
+  <ellipse fill="#333336" stroke="#808080" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" cx="214.51889" cy="99.015839" id="svg_17" rx="21" ry="21"/>
+  <ellipse fill="#333336" stroke="#808080" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" cx="313.51889" cy="99.015839" id="svg_18" rx="21" ry="21"/>
+  <ellipse stroke="#808080" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" cx="389.518887" cy="97.515841" id="svg_19" rx="22.999995" ry="22.499998"/>
+  <ellipse fill="#333336" stroke="#808080" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" cx="143.51889" cy="99.015839" id="svg_31" rx="21" ry="21"/>
+  <rect fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="158.746653" y="49.255995" width="13.577097" height="44.513181" id="svg_69" stroke="#333336" transform="rotate(44.436004638671875 165.53521728515622,71.5125732421875) "/>
+  <rect fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="182.753912" y="107.523249" width="13.577097" height="44.513181" id="svg_71" stroke="#333336" transform="rotate(44.436004638671875 189.54248046875006,129.77984619140622) "/>
+  <rect stroke="#333336" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="333.246217" y="52.755986" width="13.577097" height="44.513181" id="svg_7" transform="rotate(37 340.03479003906244,75.01257324218749) "/>
+  <rect stroke="#333336" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="368.246129" y="101.255864" width="13.577097" height="49.01317" id="svg_8"/>
+  <rect stroke="#333336" filter="url(#svg_14_blur)" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="410.202552" y="83.342072" width="9.78258" height="55.609495" id="svg_14" transform="rotate(-31 415.0938720703125,111.14682006835943) "/>
+  <rect stroke="#333336" filter="url(#svg_14_blur)" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="258.202929" y="60.84213" width="9.78258" height="77.609437" id="svg_15"/>
+  <rect stroke="#808080" fill="#808080" stroke-width="1.5" stroke-opacity="null" x="274.019068" y="122.015797" width="18.999996" height="22.000042" id="svg_23"/>
+  <rect stroke="#333336" filter="url(#svg_14_blur)" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="266.952967" y="121.091919" width="9.78258" height="26.609561" id="svg_24" transform="rotate(90 271.84423828125006,134.3966979980469) "/>
+  <rect fill="#808080" stroke-width="1.5" stroke-opacity="null" x="76.019564" y="57.015959" width="17" height="39" id="svg_25" stroke="#808080" transform="rotate(20 84.51956176757814,76.51596069335936) "/>
+  <rect stroke="#333336" filter="url(#svg_14_blur)" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="88.703342" y="61.342127" width="9.78258" height="77.109436" id="svg_20"/>
+  <rect stroke="#333336" filter="url(#svg_14_blur)" fill="#333336" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="83.02198" y="61.74094" width="9.78258" height="29.268149" id="svg_27" transform="rotate(20 87.91326904296872,76.375) "/>
+  <text stroke="#808080" xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_28" y="205.375581" x="422.002036" fill-opacity="null" stroke-opacity="null" fill="#808080" transform="matrix(1.2257917339123452,0,0,1.2257917339123452,-142.14540184790968,-73.89250575306477) ">STUDIO</text>
+ </g>
+</svg>

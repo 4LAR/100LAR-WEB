@@ -1,0 +1,19 @@
+<svg width="350" height="350" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect height="352" width="352" y="-1" x="-1" fill="none" id="canvas_background"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect rx="17" height="300" width="300" y="23" x="28" stroke-width="11" stroke="#000" fill="none" id="svg_2"/>
+  <g stroke="null" id="svg_6" transform="rotate(-10.489803314208984 211.15995788574224,192.8616943359375) ">
+   <path stroke="null" d="m145.346589,94.141643l131.626741,101.015293l-57.183597,9.625205l35.580355,72.534566l-29.583106,14.265043l-35.786022,-73.044608l-44.654371,38.681809l0,-163.077308z" id="svg_5"/>
+  </g>
+  <line transform="rotate(21.05776023864746 158.92327880859375,96.02984619140626) " stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="82.60656" x2="172.346565" y1="109.453125" x1="145.5" stroke-width="7.5" fill="none"/>
+  <line transform="rotate(-9.629048347473145 107.92327880859371,136.0298461914062) " stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="122.60656" x2="121.346565" y1="149.453125" x1="94.5" stroke-width="7.5" fill="none"/>
+  <line transform="rotate(139.9017333984375 130.92327880859375,78.02984619140625) " stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_7" y2="64.60656" x2="144.346565" y1="91.453125" x1="117.5" stroke-width="7.5" fill="none"/>
+  <line transform="rotate(65.44285583496094 100.92327880859376,98.02984619140624) " stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="84.60656" x2="114.346565" y1="111.453125" x1="87.5" stroke-width="7.5" fill="none"/>
+ </g>
+</svg>

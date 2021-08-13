@@ -1,0 +1,15 @@
+<svg width="350" height="350" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect id="canvas_background" fill="none" x="-1" y="-1" width="352" height="352"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_2" fill="none" stroke="#000" stroke-width="11" x="28" y="23" width="300" height="300" rx="17"/>
+  <g transform="rotate(-10.489803314208984 186.9999999999998,168) " stroke="null" id="svg_6">
+   <path stroke="null" id="svg_5" d="m101.956787,40.435179l170.08643,130.530705l-73.891923,12.43757l45.976488,93.728253l-38.226925,18.433117l-46.242248,-94.387338l-57.701821,49.98415l0,-210.726456z"/>
+  </g>
+ </g>
+</svg>

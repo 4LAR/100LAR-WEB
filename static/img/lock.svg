@@ -1,0 +1,16 @@
+<svg width="350" height="350" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="352" width="352" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="null" id="svg_1" d="m254.563171,150.76179l0,-48.47642c0,-40.150595 -35.631038,-72.714629 -79.563165,-72.714629s-79.563165,32.564035 -79.563165,72.714629l0,48.47642l-39.781583,0l0,169.667469l238.689496,0l0,-169.667469l-39.781583,0zm-132.605275,0l0,-48.47642c0,-26.734745 23.789386,-48.47642 53.04211,-48.47642s53.04211,21.741674 53.04211,48.47642l0,48.47642l-106.08422,0z"/>
+  <path id="svg_2" opacity="0.5" stroke-opacity="null" stroke-width="11" stroke="#000" fill="#000000"/>
+  <path id="svg_3" opacity="0.5" stroke-opacity="null" stroke-width="11" stroke="#000" fill="#000000"/>
+  <path id="svg_4" opacity="0.5" stroke-opacity="null" stroke-width="11" stroke="#000" fill="#000000"/>
+  <path id="svg_5" opacity="0.5" stroke-opacity="null" stroke-width="11" stroke="#000" fill="#000000"/>
+  <path id="svg_6" opacity="0.5" stroke-opacity="null" stroke-width="11" stroke="#000" fill="#000000"/>
+ </g>
+</svg>
