@@ -25,12 +25,23 @@ function openModal(modalId) {
 
 open_page("page_home");
 
+function left_hot_bar() {
+  if (!document.getElementById("hmt").checked){
+    document.getElementById(current_page).style.transition = "0.5s all";
+    document.getElementById(current_page).style.left = 100;
+  } else {
+    document.getElementById(current_page).style.transition = "0.5s all";
+    document.getElementById(current_page).style.left = 310;
+  }
+}
+
 function open_page(page_name, animation=false){ //переключение страниц
   var opened = false;
 
   document.getElementById("hmt").checked = false;
 
   document.getElementById(current_page).style.left = -1900;
+  document.getElementById(current_page).style.transition = "0.2s all";
 
   for (let i = 0; i < page_names.length; i++){
     if (page_names[i] == page_name){
@@ -50,6 +61,7 @@ function open_page(page_name, animation=false){ //переключение ст�
   } else {
     document.getElementById("vl_left_hotbar").style.opacity = 1;
     document.getElementById("vl_left_hotbar").style.top = document.getElementById(page_name + "_button").getBoundingClientRect().top + 8;
+    document.getElementById(page_name).style.transition = "0.2s all";
     document.getElementById(page_name).style.left = 100;
     current_page = page_name;
   }
