@@ -94,7 +94,7 @@ hr {
   position: fixed;
   left: 0%;
   top: 40px;
-  transition:0.5s all;
+  transition:0.2s all;
 }
 
 .vl_left_hotbar {
@@ -110,6 +110,12 @@ hr {
 
 .hidden-menu-ticker:checked ~ .left_hotbar {
   width: 280px;
+  transition:0.5s all;
+}
+
+._left_hotbar:hover {
+  width: 280px;
+  transition:0.5s all;
 }
 
 .left_hotbar_button_container {
@@ -125,7 +131,7 @@ hr {
 .left_hotbar h2 {
   width: 0px;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.2s;//0.3
 }
 
 .hidden-menu-ticker:checked ~ .left_hotbar h2 {
@@ -231,6 +237,7 @@ hr {
 
 
 .user_container {
+  --cursor: pointer;
   left: 1600px;
   top: 0px;
   height: 60px;
@@ -247,8 +254,8 @@ hr {
   background-color: #444446;
   border-radius: 5px;
   width: 300px;
-  --height: 200px;
-  height: 150px;
+  height: 200px;
+  --height: 150px;
 }
 
 .user_container ul {
@@ -279,6 +286,13 @@ hr {
 .user_lvl_coin_container {
   background-color: #39393C;
   border-radius: 5px;
+  width: 260px;
+  height: 70px;
+  transition:0.2s all;
+  padding-left: 40px;
+}
+
+.user_login_container {
   width: 260px;
   height: 70px;
   transition:0.2s all;
@@ -569,10 +583,44 @@ hr {
   position: absolute;
   color: #808080;
   border: 0;
-  background-color: #444446;
-  padding: 12px 20px;
-  margin: 8px 0;
+  background-color: #343436;
+  padding: 10px;
+  height: 35px;
+  width: 290px;
   border-radius: 10px;
-  width: 300px;
   --transition:0.2s all;
+}
+
+.login_button_container {
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  left: 2px;
+
+  background-color: #444446;
+  border-radius: 5px;
+  width: 145px;
+  height: 28px;
+  transition:0.2s all;
+}
+
+.login_button_container:hover {
+  background-color: #39393C;
+}
+
+.register_button_container {
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  left: 145px;
+
+  background-color: #444446;
+  border-radius: 5px;
+  width: 145px;
+  height: 28px;
+  transition:0.2s all;
+}
+
+.register_button_container:hover {
+  background-color: #39393C;
 }

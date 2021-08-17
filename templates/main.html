@@ -310,8 +310,10 @@
       <ul style="position: fixed;">
 
         <li>
+
           <p align="center">
-            <div class="user_lvl_coin_container">
+            <!--<div class="user_lvl_coin_container">
+
               <table>
                 <tr>
                   <th width="25%">
@@ -329,6 +331,17 @@
                   </th>
                 </tr>
               </table>
+            </div>-->
+            <div class="user_login_container">
+
+              <input type="text" placeholder="Login" class="login_style_class" style="left: 2px; top: 0px">
+              <input type="password" placeholder="Password" class="login_style_class" style="left: 2px; top: 40px">
+              <div class="login_button_container">
+                <h2 style="margin: 3px 45px;">Login</h2>
+              </div>
+              <div class="register_button_container">
+                <h2 style="margin: 3px 38px;">Register</h2>
+              </div>
             </div>
           </p>
         </li>
@@ -414,7 +427,7 @@
 
 
   <input type="checkbox" id="hmt" class="hidden-menu-ticker" onclick="left_hot_bar()">
-  <div class = "left_hotbar">
+  <div id="left_hotbar" class = "left_hotbar">
     <div id="vl_left_hotbar" class="vl_left_hotbar"></div>
     <hr>
     <ul>
@@ -492,13 +505,29 @@
         </table></p>
       </a>
     </div>
+    <!--
+    <div style="position: fixed; bottom: 8px; cursor: pointer">
+      <hr>
+      <p><table class="left_hotbar_button_container">
+        <tr>
+          <th>
+            <img class="icon" width="60" height="60"s src = "static/img/warning.svg">
+          </th>
+          <th>
+            <h2>WARNINGS</h2>
+          </th>
+        </tr>
+      </table></p>
+      <hr>
+    </div>
+  -->
 
 
   </div>
 
-  <label class="btn-menu" for="hmt">
+  <!--<label class="btn-menu" for="hmt">
     <img class="icon" width="50" height="50"s src = "static/img/apps.svg" style="float: left; margin-left: 0;">
-  </label>
+  </label>-->
 
   <div id="loading_background" class="loading_background">
     <p><h1>Loading...</h1></p>
