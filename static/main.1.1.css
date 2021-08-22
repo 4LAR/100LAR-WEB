@@ -234,10 +234,12 @@ hr {
   opacity: 0;
 }
 
-
+.hidden_user_container_checkbox {
+  display: none;
+}
 
 .user_container {
-  --cursor: pointer;
+  cursor: pointer;
   left: 1600px;
   top: 0px;
   height: 60px;
@@ -248,14 +250,9 @@ hr {
   transition:0.5s all;
 }
 
-.user_container:hover {
-  left: 1600px;
-  top: 0px;
-  background-color: #444446;
-  border-radius: 5px;
-  width: 300px;
+.hidden_user_container_checkbox:checked ~ .user_container  {
+  cursor: default;
   height: 200px;
-  --height: 150px;
 }
 
 .user_container ul {
@@ -265,7 +262,7 @@ hr {
   transition: all 0.3s;
 }
 
-.user_container:hover ul {
+.hidden_user_container_checkbox:checked ~ .user_container ul {
   height: 200px;
   transition: all 0.85s;
 }
@@ -300,8 +297,12 @@ hr {
 }
 
 
+.hidden_notifications_container_checkbox {
+  display: none;
+}
 
 .mail_container {
+  cursor: pointer;
   left: 1155px;
   top: 0px;
   height: 60px;
@@ -312,7 +313,8 @@ hr {
   transition:0.5s all;
 }
 
-.mail_container:hover {
+.hidden_notifications_container_checkbox:checked ~ .mail_container {
+  cursor: default;
   left: 955px;
   top: 0px;
   background-color: #444446;
@@ -328,7 +330,7 @@ hr {
   transition: all 0.3s;
 }
 
-.mail_container:hover ul {
+.hidden_notifications_container_checkbox:checked ~ .mail_container ul {
   height: 380px;
   width: 680px;
   transition: all 0.85s;
@@ -428,67 +430,63 @@ hr {
 }
 
 .chat_messages_pos {
+  --background-color: #000;
+  overflow: auto;
   position: absolute;
   left: 450px;
+  top: 0px;
+  width: 1370px;
+  height: 870px;
 }
 
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
-}
-
-.chat_message_container_you {
-  left: 100px;
-  background-color: #303033;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
-  width: 1330px;
+.message_container {
+  position: relative;
+  top: 0%;
+  width: 98.5%;
   height: 60px;
-}
-
-.chat_message_container_you img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
-  margin-right: 20px;
-  --border-radius: 50%;
-}
-
-.chat_message_container {
-  left: 100px;
   background-color: #39393C;
-  border-radius: 5px;
-  padding: 10px;
-  width: 1330px;
+  margin: 5px 0;
+
+}
+
+.message_username_class {
+  position: absolute;
+  left: 20px;
+  top: -8px;
+}
+
+.message_text_class {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+}
+
+.chats_names_list {
+  position: relative;
+  top: 0%;
+  width: 438px;
   height: 60px;
+  background-color: #39393C;
+  margin: 5px 0;
 }
 
-.chat_message_container img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
-  margin-right: 20px;
-  --border-radius: 50%;
+.chats_names_list h2 {
+  position: absolute;
+  left: 20px;
+  top: -8px;
 }
 
-.time-right {
-  float: right;
-  color: #aaa;
+.chat_messages_pos::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
 }
 
-.time-left {
-  float: left;
-  color: #999;
+.chat_messages_pos::-webkit-scrollbar-track {
+  background: #222226;        /* color of the tracking area */
 }
 
-
-
-
-
-
-
-
+.chat_messages_pos::-webkit-scrollbar-thumb {
+  background-color: #808080;    /* color of the scroll thumb */
+}
 
 .home_page {
   left: 100px;

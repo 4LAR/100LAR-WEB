@@ -25,15 +25,52 @@ function openModal(modalId) {
 
 open_page("page_home");
 
-/*document.getElementById("left_hotbar").addEventListener("mouseover", function( event ) {
-  // highlight the mouseover target
-  console.log('open')
+var user_container = document.getElementById('user_container');
+var user_container_show_bool = false;
 
-  // reset the color after a short delay
-  setTimeout(function() {
-    console.log('close')
-  }, 500);
-}, false);*/
+function user_container_show() {
+  if (!user_container_show_bool){
+    document.getElementById('user_container_checkbox').checked = true;
+    user_container_show_bool = true;
+  }
+}
+
+function user_container_close() {
+  if (user_container_show_bool){
+    document.getElementById('user_container_checkbox').checked = false;
+    user_container_show_bool = false;
+  }
+
+}
+
+var notifications_container_show_bool = false;
+function notifications_container_show() {
+  if (!notifications_container_show_bool){
+    document.getElementById('notifications_container_checkbox').checked = true;
+    notifications_container_show_bool = true;
+  }
+}
+
+function notifications_container_close() {
+  if (notifications_container_show_bool){
+    document.getElementById('notifications_container_checkbox').checked = false;
+    notifications_container_show_bool = false;
+  }
+
+}
+
+$(document).mouseup(function (e) {
+    var container = $(document.getElementById('user_container'));
+    if (container.has(e.target).length === 0){
+        user_container_close();
+    }
+
+    var container = $(document.getElementById('mail_container'));
+    if (container.has(e.target).length === 0){
+        notifications_container_close();
+    }
+});
+
 
 function left_hot_bar() {
   if (!document.getElementById("hmt").checked){

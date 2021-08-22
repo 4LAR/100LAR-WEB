@@ -17,6 +17,10 @@ import logging
 import gevent
 from gevent.pywsgi import WSGIServer
 
+#from pyngrok import ngrok
+#http_tunnel = ngrok.connect()
+#ssh_tunnel = ngrok.connect(80, "tcp", remote_addr="1.tcp.ngrok.io:12345")
+
 #from flask_socketio import SocketIO, emit
 
 import shutil
