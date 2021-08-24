@@ -331,7 +331,7 @@ hr {
 }
 
 .hidden_notifications_container_checkbox:checked ~ .mail_container ul {
-  height: 380px;
+  height: 320px;
   width: 680px;
   transition: all 0.85s;
 }
@@ -553,6 +553,16 @@ hr {
   transition:0.2s all;
 }
 
+.register_page {
+  left: 100px;
+  top: 80px;
+  position: fixed;
+  transition:0.2s all;
+}
+
+.register_page table {
+  border-spacing: 10px 0px;
+}
 
 .not_found_page {
   left: 100px;

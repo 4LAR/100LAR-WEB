@@ -1,3 +1,5 @@
+from flask_login import LoginManager , login_required , UserMixin , login_user, current_user, logout_user
+
 @app.route('/')
 def index():
     return render_template('index.html')

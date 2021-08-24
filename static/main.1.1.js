@@ -1,5 +1,5 @@
 
-var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_not_found'];
+var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_not_found', 'page_register'];
 var current_page = "page_home";
 //var closed_page = "";
 
@@ -106,8 +106,12 @@ function open_page(page_name, animation=false){ //переключение ст�
     current_page = "page_not_found";
     document.getElementById("vl_left_hotbar").style.opacity = 0;
   } else {
-    document.getElementById("vl_left_hotbar").style.opacity = 1;
-    document.getElementById("vl_left_hotbar").style.top = document.getElementById(page_name + "_button").getBoundingClientRect().top + 8;
+    try{
+      document.getElementById("vl_left_hotbar").style.opacity = 1;
+      document.getElementById("vl_left_hotbar").style.top = document.getElementById(page_name + "_button").getBoundingClientRect().top + 8;
+    } catch {
+      document.getElementById("vl_left_hotbar").style.opacity = 0;
+    }
     document.getElementById(page_name).style.transition = "0.2s all";
     document.getElementById(page_name).style.left = 100;
     current_page = page_name;

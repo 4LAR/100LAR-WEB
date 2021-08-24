@@ -1,0 +1,2 @@
+python-engineio==3.13.0
+flask_socketio==4.3.2
