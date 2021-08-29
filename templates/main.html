@@ -5,6 +5,8 @@
     <link rel="shortcut icon" href="static/img/favicon.png" type="image/png">
     <link rel="stylesheet" href = "static/main.1.1.css"/>
 
+    <link rel="stylesheet" href = "static/user_page.1.0.css"/>
+
   </head>
 
   <body style="font: 13px Helvetica, Arial; width: 1900px; margin:0 auto;" bgcolor = "#222226">
@@ -14,75 +16,42 @@
       <hr>
       <h2>Такой страницы на существует, либо она ещё в разработке.</h2>
     </div>
-
     <div id="page_home" class="home_page">
-      <ul>
+      <div id="page_home_profile" class="home_page_profile">
+        <img width="250" height="250" src="static/img/profile.svg" class = "icon">
+        <div class="page_home_profile_information">
+          <div class="page_home_profile_information_name">
+            <h1 style="font-size: 3em; margin: 2px 10px">100LAR</h1>
+          </div>
+
+          <div class="page_home_profile_information_lvl">
+            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/key.svg">
+            <h1 style="margin: -35px 40px">LVL: 1 (A)<h1>
+          </div>
+
+          <div class="page_home_profile_information_coins">
+            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/coin.svg">
+            <h1 style="margin: -35px 40px">COINS: 1000<h1>
+          </div>
+
+          <div class="page_home_profile_information_button_settings">
+            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/gear.svg">
+            <h1 style="margin: -35px 40px">settings<h1>
+          </div>
+
+          <div class="page_home_profile_information_button_logout">
+            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/logout.svg">
+            <h1 style="margin: -35px 40px">logout<h1>
+          </div>
+
+          <div class="page_home_profile_information_xz">
+            
+          </div>
+
+        </div>
+      </div>
+      <div id="page_home_news" class="home_page_news">
         <li>
-          <table>
-            <tr>
-              <th valign="top">
-
-                <div class="news_container_1_nohover">
-                  <p><img width="100%" src = "static/img/100LAR-STUDIO.svg" style="float: left; margin-left: 0;"></p>
-                  <table>
-                    <tr>
-                      <th>
-                        <a align="center" href = "https://vk.com/stolarcorp"><img class="icon" width="60" height="60"s src = "static/img/vk.svg" style="float: left; margin-left: 0;"></a>
-                      </th>
-                      <th>
-                        <a align="center" href = "https://github.com/4LAR"><img class="icon" width="60" height="60"s src = "static/img/github.svg" style="float: left; margin-left: 0;"></a>
-                      </th>
-                    </tr>
-                  </table>
-                </div>
-
-                <!--<div class="news_container_1_opacity"></div>-->
-              </th>
-              <th>
-                <div class="news_container_1" align="left">
-                  <p>Прошу простить за нестабильность данного ресурса, так как он ещё находится в процессе тестирования и постоянно обновляется.</p>
-                  <p>На этом ресурсе вы можете общаться через локальный чат с другими посетителями, но только после авторизации.</p>
-                  <p>Если вы нашли на сайте ошибку, или у вас сайт не корректно работает, то вам следует перейти <a href="">сюда</a> и описать проблему которую вы нашли.</p>
-                </div>
-              </th>
-
-              <th valign="top">
-                <div class="news_container_2">
-                  <p>Регистрация ещё недоступна!</p>
-                  <!--<input class="login_style_class" style="left: 0px; top: 0px;">
-                  <input class="login_style_class" style="">-->
-                </div>
-              </th>
-
-            </tr>
-          </table>
-        </li>
-        <!--
-        <li>
-          <table>
-            <tr>
-              <th>
-                <br>
-                <hr>
-                <h2>Другие прокты от 100LAR-STUDIO</h2>
-                <hr>
-                <div class="news_container_2">
-                  <p><><></p>
-                </div>
-              </th>
-            </tr>
-          </table>
-        </li>
-      -->
-      </ul>
-    </div>
-    <div id="page_settings" class="settings_page">
-      <a href=""><h2>Вызвать уведомление</h2></a>
-    </div>
-    <div id="page_register" class="register_page">
-      <ul>
-        <li>
-
           <table>
             <tr>
               <th>
@@ -94,10 +63,94 @@
                   <p>SCALE 4</p>
                 </div>
               </th>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <th>
+                <div class="news_container_3">
+                  <p>SCALE 3</p>
+                </div>
+              </th>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <th>
+                <div class="news_container_2">
+                  <p>SCALE 2</p>
+                </div>
+              </th>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
+              <th>
+                <div class="news_container_1">
+                  <p>SCALE 1</p>
+                </div>
+              </th>
 
             </tr>
           </table>
-
+        </li>
+      </div>
+    </div>
+    <div id="page_settings" class="settings_page">
+      <a href=""><h2>Вызвать уведомление</h2></a>
+    </div>
+    <div id="page_register" class="register_page">
+      <ul>
+        <li>
+          <table>
+            <tr>
+              <th>
+                <hr>
+                <h2 align="center">Рамки для новостей</h2>
+                <hr>
+                <br>
+                <div class="news_container_4">
+                  <p>SCALE 4</p>
+                </div>
+              </th>
+            </tr>
+          </table>
         </li>
         <li>
           <table>
@@ -164,7 +217,6 @@
           </table>
         </li>
       </ul>
-
     </div>
     <div id="page_news" class="news_page">
       <ul>
@@ -210,7 +262,6 @@
         </li>
 
         <li>
-
           <table>
             <tr>
               <th>
@@ -572,10 +623,10 @@
       <img class="icon" width="60" height="60"s src = "static/img/mail.svg" style="float: left; margin-left: 10;">
       <!--</a>-->
       <h2 align="center"><span>NOTIFICATIONS</span></h2>
+      <div>
 
-
+      </div>
       <ul style="position: fixed;">
-
         <li>
           <div class="mail_message_container">
             <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left; margin-left: 0;">
@@ -590,7 +641,6 @@
             <p align="center">Здесь будут показаны последние сообщения.</p>
           </div>
         </li>
-
       </ul>
     </div>
   </div>
