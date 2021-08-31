@@ -233,68 +233,6 @@ hr {
   opacity: 0;
 }
 
-.hidden_user_container_checkbox {
-  display: none;
-}
-
-.user_container {
-  cursor: pointer;
-  left: 1600px;
-  top: 0px;
-  height: 60px;
-  background-color: #444446;
-  border-radius: 5px;
-  width: 300px;
-  position: fixed;
-  transition:0.5s all;
-}
-
-.hidden_user_container_checkbox:checked ~ .user_container  {
-  cursor: default;
-  height: 200px;
-}
-
-.user_container ul {
-  height: 0px;
-  overflow: hidden;
-
-  transition: all 0.3s;
-}
-
-.hidden_user_container_checkbox:checked ~ .user_container ul {
-  height: 200px;
-  transition: all 0.85s;
-}
-
-.user_button_container {
-  background-color: #444446;
-  border-radius: 5px;
-  width: 300px;
-  height: 28px;
-  transition:0.2s all;
-}
-
-.user_button_container:hover {
-  background-color: #39393C;
-
-}
-
-.user_lvl_coin_container {
-  background-color: #39393C;
-  border-radius: 5px;
-  width: 260px;
-  height: 70px;
-  transition:0.2s all;
-  padding-left: 40px;
-}
-
-.user_login_container {
-  width: 260px;
-  height: 70px;
-  transition:0.2s all;
-  padding-left: 40px;
-}
-
 
 .hidden_notifications_container_checkbox {
   display: none;
@@ -496,9 +434,7 @@ hr {
   height: 93%;
   padding: 5px;
   transition:0.2s all;
-  transition:0.2s all;
 }
-
 
 .home_page::-webkit-scrollbar {
   display: none;
@@ -591,38 +527,4 @@ hr {
   width: 290px;
   border-radius: 10px;
   --transition:0.2s all;
-}
-
-.login_button_container {
-  cursor: pointer;
-  position: absolute;
-  top: 80px;
-  left: 2px;
-
-  background-color: #444446;
-  border-radius: 5px;
-  width: 145px;
-  height: 28px;
-  transition:0.2s all;
-}
-
-.login_button_container:hover {
-  background-color: #39393C;
-}
-
-.register_button_container {
-  cursor: pointer;
-  position: absolute;
-  top: 80px;
-  left: 145px;
-
-  background-color: #444446;
-  border-radius: 5px;
-  width: 145px;
-  height: 28px;
-  transition:0.2s all;
-}
-
-.register_button_container:hover {
-  background-color: #39393C;
 }

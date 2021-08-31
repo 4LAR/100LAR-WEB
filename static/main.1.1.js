@@ -1,5 +1,5 @@
 
-var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_not_found', 'page_register'];
+var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_not_found'];
 var current_page = "page_home";
 //var closed_page = "";
 
