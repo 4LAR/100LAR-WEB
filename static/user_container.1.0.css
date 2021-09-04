@@ -6,6 +6,24 @@
   display: none;
 }
 
+.user_container_close {
+  display: none;
+  left: 1600px;
+  top: 0px;
+  height: 60px;
+  opacity: 0;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  transition:0.5s all;
+}
+
+.hidden_user_container_checkbox:checked ~ .user_container_close  {
+  display: block;
+  cursor: pointer;
+  height: 185px;
+}
+
 .user_container {
   cursor: pointer;
   left: 1600px;

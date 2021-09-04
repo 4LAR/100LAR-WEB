@@ -1,3 +1,7 @@
+html {
+  user-select: none;
+}
+
 p {
   color: #808080; /* Цвет текста */
 }
@@ -248,6 +252,26 @@ hr {
   width: 300px;
   position: fixed;
   transition:0.5s all;
+}
+
+.mail_container_close {
+  display: none;
+  cursor: pointer;
+  left: 1015px;
+  top: 0px;
+  height: 60px;
+  opacity: 0;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  transition:0.5s all;
+}
+
+.hidden_notifications_container_checkbox:checked ~ .mail_container_close {
+  display: block;
+
+  border-radius: 5px;
+  width: 580px;
 }
 
 .hidden_notifications_container_checkbox:checked ~ .mail_container {
