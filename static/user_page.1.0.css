@@ -7,6 +7,16 @@
   background-color: #333336;
 }
 
+.home_page_settings {
+  --width: 735px;
+  width: 400px;
+  height: 250px;
+  left: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #333336;
+}
+
 .page_home_profile_information {
   position: absolute;
   left: 300px;
@@ -15,7 +25,7 @@
 
 .home_page_news {
   --overflow: scroll;
-  top: 350px;
+  top: 270px;
   position: absolute;
   --height: 70%
 }
@@ -90,6 +100,21 @@
 }
 
 .page_home_profile_information_button_logout:hover {
+  transition:0.2s all;
+  background-color: #2E2E31;
+}
+
+.home_page_settings_button {
+  cursor: pointer;
+  width: 380px;
+  height: 40px;
+  
+  position: absolute;
+  border-radius: 5px;
+  background-color: #323235;
+}
+
+.home_page_settings_button:hover {
   transition:0.2s all;
   background-color: #2E2E31;
 }
