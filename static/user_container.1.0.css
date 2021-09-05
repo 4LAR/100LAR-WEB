@@ -21,7 +21,6 @@
 .hidden_user_container_checkbox:checked ~ .user_container_close  {
   display: block;
   cursor: pointer;
-  height: 185px;
 }
 
 .user_container {
