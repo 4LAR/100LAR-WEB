@@ -55,7 +55,7 @@ function openModal(modalId) { // функция для показа эелеме
   }
 }
 
-open_page("page_news"); // открываем страницу которую пользователь должен увидеть первой
+open_page("page_register"); // открываем страницу которую пользователь должен увидеть первой
 
 var user_container = document.getElementById('user_container');
 var user_container_show_bool = false;

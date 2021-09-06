@@ -24,10 +24,24 @@
   float: right;
   color: #808080;
   border: 0;
-  background-color: #343436;
+  background-color: #404040;
   padding: 10px;
   height: 35px;
   width: 690px;
   border-radius: 10px;
   --transition:0.2s all;
+}
+
+.register_page_button_container {
+  cursor: pointer;
+  position: absolute;
+  background-color: #444446;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  transition:0.2s all;
+}
+
+.register_page_button_container:hover {
+  background-color: #39393C;
 }
