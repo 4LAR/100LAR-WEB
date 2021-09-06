@@ -32,6 +32,40 @@ ul {
 
 input {outline:none;}
 
+
+img {
+  transition:1s all;
+}
+
+.light {
+  filter: invert(100%) hue-rotate(180deg);
+  transition:1s all;
+}
+.light img:not(.icon, .icon_no) {
+  filter: invert(100%) hue-rotate(180deg);
+  --transition:1s all;
+}
+
+.light body {
+  transition:1s all;
+}
+
+.dark {
+  transition:1s all;
+}
+
+
+.background {
+  background-color:  #222226;
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  width: 100%;
+  height: 100%;
+}
+
 .loading_background {
   position: fixed;
   background-color:  #333336;

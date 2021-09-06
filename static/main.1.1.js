@@ -1,7 +1,39 @@
 
-var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_not_found']; // список доступных страниц
+var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_register', 'page_not_found']; // список доступных страниц
 var current_page = "page_home"; // текущая страница
 //var closed_page = "";
+
+
+var dark_mode = true;
+
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+if (getCookie('dark_mode') == 'false') {
+  dark_mode = false;
+} else {
+  dark_mode = true;
+}
+
+if (dark_mode)
+  document.getElementById('html').className = 'dark';
+else
+  document.getElementById('html').className = 'light';
+
+function switch_theme() {
+  if (dark_mode){
+    document.getElementById('html').className = 'light';
+    dark_mode = false;
+    document.cookie = "dark_mode=false";
+  } else {
+    document.getElementById('html').className = 'dark';
+    dark_mode = true;
+    document.cookie = "dark_mode=true";
+  }
+}
 
 for (let i = 0; i < page_names.length; i++){ // перемещаем все страницы за границы экрана
   document.getElementById(page_names[i]).style.left = 2000;//-1900;
@@ -85,6 +117,9 @@ function left_hot_bar() { // функция для открытия и закр�
 function open_page(page_name, animation=false){ //функция для переключения страниц
   var opened = false;
 
+  user_container_close();
+  notifications_container_close();
+
   document.getElementById(current_page).style.left = 2000; // перемещение прошлой страницы за границы экрана
   document.getElementById(current_page).style.transition = "0.2s all"; // задаём время за которое должна пройти анимация
 
@@ -92,6 +127,8 @@ function open_page(page_name, animation=false){ //функция для пере
     if (page_names[i] == page_name)
       opened = true;
   }
+
+
 
   if (!opened){ // если не нашли нужную страницу показываем <<404 not found>>
     openModal("page_not_found");

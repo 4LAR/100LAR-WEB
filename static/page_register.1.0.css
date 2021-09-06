@@ -1,0 +1,33 @@
+.register_page {
+  left: 100px;
+  top: 80px;
+  position: fixed;
+
+  overflow: scroll;
+  width: 99%;
+  height: 93%;
+  padding: 5px;
+
+  transition:0.2s all;
+}
+
+.input_register_background {
+	position: absolute;
+  background-color: #39393C;
+  border-radius: 10px;
+  width: 800px;
+  height: 35px;
+  transition:0.2s all;
+}
+
+.input_register {
+  float: right;
+  color: #808080;
+  border: 0;
+  background-color: #343436;
+  padding: 10px;
+  height: 35px;
+  width: 690px;
+  border-radius: 10px;
+  --transition:0.2s all;
+}
