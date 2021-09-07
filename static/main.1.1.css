@@ -545,26 +545,8 @@ hr {
   width: 500px;
 }
 
-
-
-
-
-
 .overflow_class {
   overflow: auto;
-}
-
-
-
-
-
-
-
-.settings_page {
-  left: 100px;
-  top: 80px;
-  position: fixed;
-  transition:0.2s all;
 }
 
 .register_page {

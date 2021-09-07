@@ -45,3 +45,23 @@
 .register_page_button_container:hover {
   background-color: #39393C;
 }
+
+.register_name_background {
+  position: absolute;
+  background-color: #39393C;
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  transition:0.2s all;
+}
+
+.register_list_background {
+  position: absolute;
+  background-color: #39393C;
+  border-radius: 10px;
+  transition:0.2s all;
+}
+
+.register_list_background h2 {
+  margin: 5px 5px;
+}

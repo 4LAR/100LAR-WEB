@@ -8,6 +8,9 @@
     <link rel="stylesheet" href = "static/user_page.1.0.css"/>
     <link rel="stylesheet" href = "static/page_register.1.0.css"/>
     <link rel="stylesheet" href = "static/user_container.1.0.css"/>
+    <link rel="stylesheet" href = "static/settings_page.1.0.css"/>
+
+    <link rel="stylesheet" href = "static/slider.css"/>
 
   </head>
 
@@ -25,29 +28,51 @@
       <table class="even">
         <tr>
           <th valign="top">
-            <div class="news_container_2" align="left">
-               <p>Н нашем сайте запрещены:</p>
-               <p>1)Негры.</p>
-              <p>2)Жиды.</p>
-              <p>3)Лгбт (и все сказачные существа, сязанные с ними).</p>
-              <p>4)Российское правительство.</p>
+            <div class="news_container_2_nohover" align="left" style="height: 360px;">
+              <div class="register_name_background" style="left: 300px;">
+                <image style="position: absolute; margin: 2px 8px; left: 20px" class="icon" width="30" height="30" src="static/img/rules.svg">
+                <h1 align="center" style="font-size: 30; margin: 0px">Правила</h1>
+              </div>
+              <div class="register_list_background" style="position: absolute; top: 80px; height: 40px">
+                <h1 style="margin: 2px 10px;">На нашем сайте запрещено:</h1>
+              </div>
+              <div class="register_list_background" style="position: absolute; top: 140px; left: 50px; width: 800px">
+                <h2>1. Всем говорить что ты негр и то что белые мусор.</h2>
+                <h2>2. Быть Жидом.</h2>
+                <h2>3. Пропагандировать ЛГБТ (и все сказачные существа, сязанные с ними).</h2>
+              </div>
+              <div class="register_list_background" style="position: absolute; top: 300px; width: 860px">
+                <h1 style="margin: 2px 10px;">За любое нарушение выше перечисленных правил, выдаётся бан.</h1>
+              </div>
+              <!--<p>4)Российское правительство.</p>-->
             </div>
           </th>
           <th valign="top">
-            <div class="news_container_2_nohover" style="height: 300px">
-              <div class="input_register_background" style="top: 30px">
+            <div class="news_container_2_nohover" style="height: 260px;">
+              <div class="register_name_background" style="left: 1200px;">
+                <image style="position: absolute; margin: 5px 8px; left: 20px" class="icon" width="25" height="25" src="static/img/register.svg">
+                <h1 align="center" style="font-size: 30; margin: 0px">Регистрация</h1>
+              </div>
+              <div class="input_register_background" style="top: 80px">
                 <h3 style="margin: 8px 10px; float: left;">UserName: </h3>
                 <input id="register_page_username" style="margin: 0px -10px;" type="text" placeholder="Login" class="input_register" style="left: 4px; top: 0px">
               </div>
-              <div class="input_register_background" style="top: 80px">
+              <div class="input_register_background" style="top: 130px">
                 <h3 style="margin: 8px 10px; float: left;">Password: </h3>
                 <input id="register_page_password" style="margin: 0px -10px;" type="Password" placeholder="Password" class="input_register" style="left: 4px; top: 0px">
               </div>
-              <div class="input_register_background" style="top: 130px">
+              <div class="input_register_background" style="top: 180px">
                 <h3 style="margin: 8px 10px; float: left;">Repeat Password: </h3>
                 <input id="register_page_password" style="margin: 0px -10px; width: 620px" type="Password" placeholder="Password" class="input_register" style="left: 4px; top: 0px">
               </div>
-              <div class="register_page_button_container" style="top:180px;left:1525px;">
+              <div class="input_register_background" style="top: 230px; width: 465px;">
+                <h3 style="margin: 8px 10px; float: left;">С правилами данного сайта полность согласен</h3>
+              </div>
+              <label class="switch" style="top: 205px; left: 80px">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <div class="register_page_button_container" style="top:230px;left:1525px;">
                 <h2 style="margin:10px 0px;">Register</h2>
               </div>
             </div>
@@ -107,6 +132,61 @@
           </tr>
         </table>
           <ul>
+            <li>
+              <table>
+                <tr>
+                  <th valign="top">
+                    <div class="news_container_2_nohover">
+                      <h2>TANK MASTERS v0.0.51.x</h2>
+                      <hr>
+                      <img width="860" src="static/news_img/1.png">
+                      <div class="news_container_1_hovered">
+                        <h2>Список обновлений</h2>
+                        <hr>
+                        <p align="left"> - Редактор танка. Можно менять основу и башню.</p>
+                        <p align="left"> - 2 Новый основания и 2 новых башни</p>
+                      </div>
+
+                      <div class="news_bottom_bar" style="height: 60px">
+                        <div style="position: absolute">
+                          <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left">
+                          <h2 style="margin: 15px 65px;" align="center">100LAR</h2>
+                        </div>
+                        <div style="float: right; margin: -20px 10px;">
+                          <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/arrow_up.svg">
+                          <h2 style="margin: -10px 0px;">26<h2>
+                          <image style="margin: -15px 0px; transform: rotate(180deg);" class="icon" width="30" height="30" src="static/img/arrow_up.svg">
+                        </div>
+                      </div>
+
+                    </div>
+                  </th>
+                  <th valign="top">
+                    <div class="news_container_2_nohover">
+                      <h1>100LAR-WEB 2.0</h1>
+                      <hr>
+                      <h2>Новый дизайн и новые возможности.</h2>
+                      <hr>
+                      <img width="860" src="static/news_img/2.png">
+                      <hr style="width: 92%" align="left">
+
+                      <div class="news_bottom_bar" style="height: 60px">
+                        <div style="position: absolute">
+                          <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left">
+                          <h2 style="margin: 15px 65px;" align="center">100LAR</h2>
+                        </div>
+                        <div style="float: right; margin: -20px 10px;">
+                          <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/arrow_up.svg">
+                          <h2 style="margin: -10px 0px">12<h2>
+                          <image style="margin: -15px 0px; transform: rotate(180deg);" class="icon" width="30" height="30" src="static/img/arrow_up.svg">
+                        </div>
+                      </div>
+
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </li>
             <li>
               <table>
                 <tr>
@@ -216,7 +296,33 @@
     </div>
 
     <div id="page_settings" class="settings_page">
-      <a href=""><h2>Вызвать уведомление</h2></a>
+      <ul>
+        <li>
+          <table>
+            <tr>
+              <th valign="top">
+                <div class="news_container_2_nohover" style="height: 100px;">
+                  <label class="switch" style="position: absolute; top: 102px; left: 30px;" onclick="check_thame()">
+                    <input type="checkbox" id="settings_thame_checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <div class="settings_list_background" style="width: 200px; height: 40px; top: 100px; left: 100px;">
+                    <h2 style="margin: 5px 5px">Светлая тема</h2>
+                  </div>
+
+                </div>
+              </th>
+              <th valign="top">
+
+
+
+                </div>
+              </th>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
     </div>
 
     <div id="page_news" class="news_page">
@@ -276,6 +382,7 @@
             </tr>
           </table>
         </li>
+        <!--
         <li><hr><h1 align="center">Старый дизайн новестей</h1><hr></li>
         <li>
           <table>
@@ -398,6 +505,7 @@
             </tr>
           </table>
         </li>
+      -->
       </ul>
 
     </div>

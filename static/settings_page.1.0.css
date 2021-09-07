@@ -1,0 +1,25 @@
+.settings_page {
+  left: 100px;
+  top: 80px;
+  position: fixed;
+
+  overflow: scroll;
+  width: 99%;
+  height: 93%;
+  padding: 5px;
+
+  transition:0.2s all;
+}
+
+.settings_page table {
+  border-spacing: 10px 0px;
+
+  transition:0.2s all;
+}
+
+.settings_list_background {
+  position: absolute;
+  background-color: #39393C;
+  border-radius: 10px;
+  transition:0.2s all;
+}

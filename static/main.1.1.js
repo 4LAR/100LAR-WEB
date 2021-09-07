@@ -18,10 +18,17 @@ if (getCookie('dark_mode') == 'false') {
   dark_mode = true;
 }
 
+document.getElementById('settings_thame_checkbox').checked = !dark_mode;
+
 if (dark_mode)
   document.getElementById('html').className = 'dark';
 else
   document.getElementById('html').className = 'light';
+
+function check_thame() {
+  dark_mode = document.getElementById('settings_thame_checkbox').checked;
+  switch_theme()
+}
 
 function switch_theme() {
   if (dark_mode){
@@ -55,7 +62,7 @@ function openModal(modalId) { // функция для показа эелеме
   }
 }
 
-open_page("page_register"); // открываем страницу которую пользователь должен увидеть первой
+open_page("page_settings"); // открываем страницу которую пользователь должен увидеть первой
 
 var user_container = document.getElementById('user_container');
 var user_container_show_bool = false;
