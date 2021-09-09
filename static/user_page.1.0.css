@@ -118,3 +118,23 @@
   transition:0.2s all;
   background-color: #2E2E31;
 }
+
+.home_page_info {
+  --width: 735px;
+  width: 570px;
+  height: 250px;
+  left: 450px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #333336;
+}
+
+.page_home_profile_information_folowers {
+  width: 280px;
+  height: 40px;
+  left: 20px;
+  top: 80px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #2E2E31;
+}

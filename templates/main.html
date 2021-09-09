@@ -9,6 +9,7 @@
     <link rel="stylesheet" href = "static/page_register.1.0.css"/>
     <link rel="stylesheet" href = "static/user_container.1.0.css"/>
     <link rel="stylesheet" href = "static/settings_page.1.0.css"/>
+    <link rel="stylesheet" href = "static/chats_page.1.0.css"/>
 
     <link rel="stylesheet" href = "static/slider.css"/>
 
@@ -83,9 +84,18 @@
 
     <div id="page_home" class="home_page">
       <div class="home_page_settings">
-        <div class="home_page_settings_button" style="left: 10px; top: 20px;">
-            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/gear.svg">
-            <h1 style="margin: -35px 40px">logout<h1>
+        <h1 align="center">Functions</h1>
+        <div class="home_page_settings_button" style="left: 10px; top: 80px;">
+            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/coin.svg">
+            <h1 style="margin: -35px 40px">Send coins<h1>
+          </div>
+      </div>
+
+      <div class="home_page_info">
+        <h1 align="center">Other information</h1>
+        <div class="page_home_profile_information_folowers">
+            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/folowers.svg">
+            <h1 style="margin: -35px 40px">FOLOWERS: 0<h1>
           </div>
       </div>
 
@@ -126,7 +136,9 @@
         <table>
           <tr>
             <th>
-              <div class="news_container_4" style="height: 8px; background-color: 444446">
+              <div class="news_container_4" style="height: 30px; background-color: 444446">
+                <h2 style="position: absolute; right: 80px; top: 3px">Create</h2>
+                <image style="margin: 0px 0px; position: absolute; right: 40px" class="icon" width="30" height="30" src="static/img/add.svg">
               </div>
             </th>
           </tr>
@@ -186,6 +198,11 @@
                   </th>
                 </tr>
               </table>
+            </li>
+            <li>
+              <hr>
+              <h1 align="center">TEST CONTAINERS</h1>
+              <hr>
             </li>
             <li>
               <table>
@@ -301,7 +318,11 @@
           <table>
             <tr>
               <th valign="top">
-                <div class="news_container_2_nohover" style="height: 100px;">
+                <div class="news_container_2_nohover" style="height: 500px;">
+                  <div class="settings_name_background" style="left: 300px; width: 350px">
+                    <image style="position: absolute; margin: 2px 8px; left: 20px" class="icon" width="30" height="30" src="static/img/palette.svg">
+                    <h1 align="center" style="font-size: 30; margin: 0px">Visual settings</h1>
+                  </div>
                   <label class="switch" style="position: absolute; top: 102px; left: 30px;" onclick="check_thame()">
                     <input type="checkbox" id="settings_thame_checkbox">
                     <span class="slider round"></span>
@@ -521,29 +542,20 @@
             <ul>
               <li>
                 <div class="chats_names_list">
-                  <h2>hello world</h1>
+                  <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
+                  <h2>100LAR</h1>
+                  <h3>Диалог</h3>
                 </div>
               </li>
+
               <li>
                 <div class="chats_names_list">
-                  <h2>hello world</h1>
+                  <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
+                  <h2>ALL</h1>
+                  <h3>Общий чат</h3>
                 </div>
               </li>
-              <li>
-                <div class="chats_names_list">
-                  <h2>hello world</h1>
-                </div>
-              </li>
-              <li>
-                <div class="chats_names_list">
-                  <h2>hello world</h1>
-                </div>
-              </li>
-              <li>
-                <div class="chats_names_list">
-                  <h2>hello world</h1>
-                </div>
-              </li>
+              
             </ul>
 
             <a href="javascript:open_page('page_add_chat')"><img class="icon" width="40" height="40" src="static/img/add.svg" style="position: absolute; left: 390px; top: 5px"></a>
@@ -552,125 +564,31 @@
         </tr>
       </table>
 
-      <div class="chat_for_input_container"></div>
-      <div class="chat_input_pos">
-        <input class="chat_input_container" type=text placeholder="Type text...">
-
-      </div>
+      
+      
       <div class="chat_messages_pos">
         <!--<div style="position: absolute; left: 600px"><h1>Nothing</h1></div>-->
 
         <ul>
           <li>
             <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
+              <image class="icon" width="60" height="60" src="static/img/profile.svg">
+              <h2 class="message_username_class">100LAR</h1>
+              <h3 class="message_text_class">HELLO WORLD test message</h3>
+              <p class="message_time_class  ">9:52 09.09.2021</p>
             </div>
           </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
-          <li>
-            <div class="message_container">
-              <h2 class="message_username_class">hello world</h1>
-                <h3 class="message_text_class">hello world</h3>
-            </div>
-          </li>
+          
 
         </ul>
+
+      </div>
+      <div class="chat_for_input_container"></div>
+      
+      <div class="chat_input_pos">
+        <image style="margin: -10px 20px" class="icon" width="35" height="35" src="static/img/clip.svg">
+        <input class="chat_input_container" type=text placeholder="Type text...">
+        <image style="margin: -12px 10px" class="icon" width="35" height="35" src="static/img/send.svg">
 
       </div>
 

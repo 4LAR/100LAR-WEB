@@ -23,3 +23,12 @@
   border-radius: 10px;
   transition:0.2s all;
 }
+
+.settings_name_background {
+  position: absolute;
+  background-color: #39393C;
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  transition:0.2s all;
+}
