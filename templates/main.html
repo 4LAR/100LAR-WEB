@@ -94,9 +94,13 @@
       <div class="home_page_info">
         <h1 align="center">Other information</h1>
         <div class="page_home_profile_information_folowers">
-            <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/folowers.svg">
-            <h1 style="margin: -35px 40px">FOLOWERS: 0<h1>
-          </div>
+          <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/folowers.svg">
+          <h1 style="margin: -35px 40px">FOLOWERS: 0<h1>
+        </div>
+        <div class="page_home_profile_information_friends">
+          <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/folowers.svg">
+          <h1 style="margin: -35px 40px">FRIENDS: 0<h1>
+        </div>
       </div>
 
       <div id="page_home_profile" class="home_page_profile">
@@ -539,24 +543,27 @@
             <h2>CHATS</h2>
             <!--<br><br>
             <h1 style="position: absolute; left: 150px">Nothing</h1>-->
-            <ul>
-              <li>
-                <div class="chats_names_list">
-                  <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
-                  <h2>100LAR</h1>
-                  <h3>Диалог</h3>
-                </div>
-              </li>
+            <div class="chats_list">
+              <ul id="chats_list">
+                <li>
+                  <div class="chats_names_list">
+                    <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
+                    <h2>100LAR</h1>
+                    <h3>Диалог</h3>
+                  </div>
+                </li>
 
-              <li>
-                <div class="chats_names_list">
-                  <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
-                  <h2>ALL</h1>
-                  <h3>Общий чат</h3>
-                </div>
-              </li>
-              
-            </ul>
+                <li>
+                  <div class="chats_names_list">
+                    <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
+                    <h2>ALL</h1>
+                    <h3>Общий чат</h3>
+                  </div>
+                </li>
+                
+              </ul>
+            </h2>
+          </div>
 
             <a href="javascript:open_page('page_add_chat')"><img class="icon" width="40" height="40" src="static/img/add.svg" style="position: absolute; left: 390px; top: 5px"></a>
 
@@ -569,7 +576,7 @@
       <div class="chat_messages_pos">
         <!--<div style="position: absolute; left: 600px"><h1>Nothing</h1></div>-->
 
-        <ul>
+        <ul id="chat_messages_list">
           <li>
             <div class="message_container">
               <image class="icon" width="60" height="60" src="static/img/profile.svg">
@@ -796,6 +803,9 @@
 
 
   <script type="text/javascript" src="static/jquery-3.6.0.js"></script>
+
   <script type="text/javascript" src="static/main.1.1.js"></script>
+
+  <script type="text/javascript" src="static/chat.1.0.js"></script>
 
 </html>

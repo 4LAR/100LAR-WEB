@@ -66,7 +66,7 @@
   left: 450px;
   top: 0px;
   width: 1370px;
-  height: 870px;
+  height: 800px;
 }
 
 .message_container {
@@ -128,4 +128,14 @@
 
 .chat_messages_pos::-webkit-scrollbar-thumb {
   background-color: #808080;    /* color of the scroll thumb */
+}
+
+.chats_list {
+  overflow: auto; 
+  height: 800px;
+
+}
+
+.chats_list::-webkit-scrollbar {
+  display: none;
 }
