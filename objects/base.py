@@ -4,6 +4,8 @@
 #   last update 06.07.2021
 #
 
+# пока не используется 
+# надо дорабатывать
 
 import pickle
 import os
@@ -37,6 +39,12 @@ class Users():
     def __init__(self):
         self.index = 0
         self.name = []
+
+    def is_active(self):
+        return self.active
+
+    def get_auth_token(self):
+        return make_secure_token(self.username , key='secret_key')
 
 if os.path.isfile(file_users_names + '.pkl'):
     users_list = load_obj(file_users_names)
