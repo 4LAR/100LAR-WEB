@@ -3,7 +3,23 @@
 
 
 class User(UserMixin):
-    def __init__(self , username , password , id, lvl, scoins, inventory, info, news, other, mail, sent_mail, friends, chats, apps, active=True):
+    def __init__(self,
+        username,
+        password,
+        id,
+        lvl,
+        scoins,
+        inventory,
+        info,
+        news,
+        other,
+        mail,
+        sent_mail,
+        friends,
+        chats,
+        apps,
+        active=True
+    ):
         self.id = id                # личный индификатор пользователя
         self.info = info            # информация о пользователе (ip, и другая ересь)
         self.sent_mail = sent_mail  # - отправленные сообщения
@@ -14,10 +30,11 @@ class User(UserMixin):
         self.lvl = lvl              # уровень доступа
         self.inventory = inventory  # инвентарь
         self.news = news            # личный список новостей
-        self.friends = friends      # - список друзей
-        self.chats = chats          # - список чатов
-        self.apps = apps            # - сохранения в приложениях
+        self.friends = friends      # список друзей
+        self.chats = chats          # список чатов
+        self.apps = apps            # сохранения в приложениях
         self.scoins = scoins        # кошелёк
+        self.online = online
         self.active = active
 
     def get_id(self):
@@ -73,9 +90,6 @@ class UsersRepository:
         save_obj(self.users_id_dict, 'users_id' )
         save_obj(self.users, 'users' )
 
-    #def update_user_by_id(self, id, item):
-
-
     def get_user(self, username):
         return self.users.get(username)
 
@@ -97,10 +111,39 @@ def update_password():
     old_pass = request.args.get("old_pass", "")
     new_pass = request.args.get("new_pass", "")
     new_pass_rep = request.args.get("new_pass_rep", "")
-    #update_user_pass = users_repository.get_user(current_user.username)
     if (old_pass == current_user.password) and (new_pass == new_pass_rep):
-        old_user = User(current_user.username , current_user.password , current_user.id,  current_user.lvl, current_user.scoins, current_user.inventory, current_user.info, current_user.news, current_user.other, current_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
-        new_user = User(current_user.username , str(new_pass) , current_user.id,  current_user.lvl, current_user.scoins, current_user.inventory, current_user.info, current_user.news, current_user.other, current_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
+        old_user = User(
+            current_user.username,
+            current_user.password,
+            current_user.id,
+            current_user.lvl,
+            current_user.scoins,
+            current_user.inventory,
+            current_user.info,
+            current_user.news,
+            current_user.other,
+            current_user.mail,
+            current_user.sent_mail,
+            current_user.friends,
+            current_user.chats,
+            current_user.apps
+        )
+        new_user = User(
+            current_user.username,
+            str(new_pass),
+            current_user.id,
+            current_user.lvl,
+            current_user.scoins,
+            current_user.inventory,
+            current_user.info,
+            current_user.news,
+            current_user.other,
+            current_user.mail,
+            current_user.sent_mail,
+            current_user.friends,
+            current_user.chats,
+            current_user.apps
+        )
         users_repository.update_user(old_user, new_user)
         logout_user()
         login_user(new_user, remember=True)
@@ -112,7 +155,6 @@ def update_password():
 @login_required
 def update_name():
     name = request.args.get("name", "")
-    #update_user_pass = users_repository.get_user(current_user.username)
     simv = '|\/.,?<>{}%#@^&*: '
     ok = True
     for s in simv:
@@ -122,8 +164,38 @@ def update_name():
     if ok:
         if users_repository.get_user(name) is None:
             if (len(name) >= 6):
-                old_user = User(current_user.username , current_user.password , current_user.id,  current_user.lvl, current_user.scoins, current_user.inventory, current_user.info, current_user.news, current_user.other, current_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
-                new_user = User(name , current_user.password , current_user.id,  current_user.lvl, current_user.scoins, current_user.inventory, current_user.info, current_user.news, current_user.other, current_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
+                old_user = User(
+                    current_user.username,
+                    current_user.password,
+                    current_user.id,
+                    current_user.lvl,
+                    current_user.scoins,
+                    current_user.inventory,
+                    current_user.info,
+                    current_user.news,
+                    current_user.other,
+                    current_user.mail,
+                    current_user.sent_mail,
+                    current_user.friends,
+                    current_user.chats,
+                    current_user.apps
+                )
+                new_user = User(
+                    name,
+                    current_user.password,
+                    current_user.id,
+                    current_user.lvl,
+                    current_user.scoins,
+                    current_user.inventory,
+                    current_user.info,
+                    current_user.news,
+                    current_user.other,
+                    current_user.mail,
+                    current_user.sent_mail,
+                    current_user.friends,
+                    current_user.chats,
+                    current_user.apps
+                )
                 users_repository.update_user(old_user, new_user)
                 logout_user()
                 login_user(new_user, remember=True)
@@ -156,19 +228,76 @@ def send_scoin():
     try:
         name = request.args.get("name", "")
         sum = request.args.get("sum", "")
-        #update_user_pass = users_repository.get_user(current_user.username)
         if not(users_repository.get_user_by_id(int(name)) is None):
             if (int(sum) > 0):
                 if (int(current_user.scoins) >= int(sum)):
-                    old_user = User(current_user.username , current_user.password , current_user.id,  current_user.lvl, current_user.scoins, current_user.inventory, current_user.info, current_user.news, current_user.other, current_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
-                    new_user = User(current_user.username , current_user.password , current_user.id,  current_user.lvl, current_user.scoins - int(sum), current_user.inventory, current_user.info, current_user.news, current_user.other, current_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
+                    old_user = User(
+                        current_user.username,
+                        current_user.password,
+                        current_user.id,
+                        current_user.lvl,
+                        current_user.scoins,
+                        current_user.inventory,
+                        current_user.info,
+                        current_user.news,
+                        current_user.other,
+                        current_user.mail,
+                        current_user.sent_mail,
+                        current_user.friends,
+                        current_user.chats,
+                        current_user.apps
+                    )
+                    new_user = User(
+                        current_user.username,
+                        current_user.password,
+                        current_user.id,
+                        current_user.lvl,
+                        current_user.scoins - int(sum),
+                        current_user.inventory,
+                        current_user.info,
+                        current_user.news,
+                        current_user.other,
+                        current_user.mail,
+                        current_user.sent_mail,
+                        current_user.friends,
+                        current_user.chats,
+                        current_user.apps
+                    )
                     users_repository.update_user(old_user, new_user)
-                    #logout_user()
-                    #login_user(new_user)
 
                     scoin_user = users_repository.get_user_by_id(int(name))
-                    old_user = User(scoin_user.username , scoin_user.password , scoin_user.id,  scoin_user.lvl, scoin_user.scoins, scoin_user.inventory, scoin_user.info, scoin_user.news, scoin_user.other, scoin_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
-                    new_user = User(scoin_user.username , scoin_user.password , scoin_user.id,  scoin_user.lvl, scoin_user.scoins + int(sum), scoin_user.inventory, scoin_user.info, scoin_user.news, scoin_user.other, scoin_user.mail, current_user.sent_mail, current_user.friends, current_user.chats, current_user.apps)
+                    old_user = User(
+                        scoin_user.username,
+                        scoin_user.password,
+                        scoin_user.id,
+                        scoin_user.lvl,
+                        scoin_user.scoins,
+                        scoin_user.inventory,
+                        scoin_user.info,
+                        scoin_user.news,
+                        scoin_user.other,
+                        scoin_user.mail,
+                        current_user.sent_mail,
+                        current_user.friends,
+                        current_user.chats,
+                        current_user.apps
+                    )
+                    new_user = User(
+                        scoin_user.username,
+                        scoin_user.password,
+                        scoin_user.id,
+                        scoin_user.lvl,
+                        scoin_user.scoins + int(sum),
+                        scoin_user.inventory,
+                        scoin_user.info,
+                        scoin_user.news,
+                        scoin_user.other,
+                        scoin_user.mail,
+                        current_user.sent_mail,
+                        current_user.friends,
+                        current_user.chats,
+                        current_user.apps
+                    )
                     users_repository.update_user(old_user, new_user)
 
                     return str(scoin_user.username)
@@ -205,22 +334,17 @@ def logout():
 def login():
     if request.method == 'POST':
         username = request.form['username']
-        #print('username')
         password = request.form['password']
-        #print('password')
         registeredUser = users_repository.get_user(username)
         if registeredUser != None and registeredUser.password == password:
             print(username + ' Logged in..')
             login_user(registeredUser, remember=True)
-            #return redirect(url_for('index'))
             return 'OK'
         else:
             return 'ERROR LOGIN'
     else:
 
         return 'ERROR'
-
-        #return redirect(url_for('index')) #test
 
 @app.route('/register' , methods = ['GET' , 'POST'])
 def register_post():
@@ -265,9 +389,6 @@ formats_icons = ['png', 'jpg', 'jpeg', 'gif']
 def upload_file():
     if request.method == 'POST':
         file = request.files['file']
-        #f_bytes = f.read(MAX_FILE_ICON_SIZE)
-        #if not (len(f_bytes) == MAX_FILE_ICON_SIZE):
-        #im = Image.open(file)
         print(file)
         file.save('static/users_icons/'+str(current_user.id)+'.png')
         try:
@@ -277,17 +398,12 @@ def upload_file():
                 os.remove('static/users_icons/'+str(current_user.id)+'.png')
         except:
             os.remove('static/users_icons/'+str(current_user.id)+'.png')
-        #print(im)
-        #im.save('static/users_icons/'+str(current_user.id)+'.png', im.format)
         return 'OK'
-        #else:
-        #    return 'ERROR SIZE'
 
     else:
         return 'ERROR'
 
 @app.route('/get_name_by_id',methods=['POST', 'GET', 'OPTIONS'])
-#@auth.login_required
 def get_name_by_id():
     id = request.args.get("id", "")
     current_user_i = users_repository.get_user_by_id(int(id))
@@ -297,7 +413,6 @@ def get_name_by_id():
         return 'ERROR'
 
 @app.route('/current_user_info',methods=['POST', 'GET', 'OPTIONS'])
-#@auth.login_required
 @login_required
 def current_user_info():
     if current_user.lvl > 5:
@@ -321,7 +436,6 @@ def user_cabinet():
         return redirect(url_for('home'))
 
 @app.route('/current_user_info_name',methods=['POST', 'GET', 'OPTIONS'])
-#@auth.login_required
 def current_user_info_name():
     name = request.args.get("name", "")
     current_user_i = users_repository.get_user(name)
