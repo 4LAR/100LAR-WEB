@@ -139,3 +139,56 @@
 .chats_list::-webkit-scrollbar {
   display: none;
 }
+.hidden_newchat_container_checkbox {
+  display: none;
+}
+
+.hidden_newchat_container_checkbox_register {
+  display: none;
+}
+
+.newchat_container_close {
+  display: none;
+  left: 1600px;
+  top: 0px;
+  height: 60px;
+  opacity: 0;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  transition:0.5s all;
+}
+
+.hidden_newchat_container_checkbox:checked ~ .newchat_container_close  {
+  display: block;
+  cursor: pointer;
+}
+
+.newchat_container {
+  cursor: pointer;
+  left: 1600px;
+  top: 0px;
+  height: 60px;
+  background-color: #444446;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  transition:0.5s all;
+}
+
+.hidden_newchat_container_checkbox:checked ~ .newchat_container  {
+  cursor: default;
+  height: 185px;
+}
+
+.newchat_container ul {
+  height: 0px;
+  overflow: hidden;
+
+  transition: all 0.3s;
+}
+
+.hidden_newchat_container_checkbox:checked ~ .newchat_containerr ul {
+  height: 140px;
+  transition: all 0.85s;
+}

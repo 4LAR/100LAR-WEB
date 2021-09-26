@@ -30,3 +30,22 @@ function append_to_chats(name, type) {
 	li.setAttribute("id", "element4");
 	ul.appendChild(li);
 }
+var user_container = document.getElementById('newchat_container');
+var newchat_container_show_bool = false;
+
+function newchat_container_show() {
+  if (!newchat_container_show_bool){
+    document.getElementById('newchat_container_checkbox').checked = true;
+    newchat_container_show_bool = true;
+  } else {
+    document.getElementById('newchat_container_checkbox').checked = false;
+    newchat_container_show_bool = false;
+  }
+}
+
+function newchat_container_close() {
+  if (newchat_container_show_bool){
+    document.getElementById('newchat_container_checkbox').checked = false;
+    newchat_container_show_bool = false;
+  }
+}

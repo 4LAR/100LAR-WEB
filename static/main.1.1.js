@@ -108,6 +108,11 @@ $(document).mouseup(function (e) { // херня для закрытия бло�
     if (container.has(e.target).length === 0){
         notifications_container_close();
     }
+
+    var container = $(document.getElementById('newchat_container'));
+    if (container.has(e.target).length === 0){
+        newchat_container_close();
+    }
 });
 
 

@@ -29,7 +29,7 @@
       <table class="even">
         <tr>
           <th valign="top">
-            <div class="news_container_2_nohover" align="left" style="height: 360px;">
+            <div class="news_container_2_nohover" align="left" style="height: 720px;">
               <div class="register_name_background" style="left: 300px;">
                 <image style="position: absolute; margin: 2px 8px; left: 20px" class="icon" width="30" height="30" src="static/img/rules.svg">
                 <h1 align="center" style="font-size: 30; margin: 0px">Правила</h1>
@@ -38,11 +38,20 @@
                 <h1 style="margin: 2px 10px;">На нашем сайте запрещено:</h1>
               </div>
               <div class="register_list_background" style="position: absolute; top: 140px; left: 50px; width: 800px">
-                <h2>1. Всем говорить что ты негр и то что белые мусор.</h2>
-                <h2>2. Быть Жидом.</h2>
-                <h2>3. Пропагандировать ЛГБТ (и все сказачные существа, сязанные с ними).</h2>
+                <h2>1. Пропогандировать БЛМ.</h2>
+                <h2>2. Пропогандировать феменизм.</h2>
+                <h2>3. Пропагандировать ЛГБТ .</h2>
               </div>
-              <div class="register_list_background" style="position: absolute; top: 300px; width: 860px">
+              <div class="register_list_background" style="position: absolute; top: 300px; height: 80px">
+                <h1 style="margin: 2px 10px;">На сайте не рекомендуется регистрироваться людям </h1>
+                <h1 style="margin: 2px 10px;">определённых групп, во избежание будующего бана: </h1>
+              </div>
+              <div class="register_list_background" style="position: absolute; top: 400px; left: 50px; width: 800px">
+                <h2>1. Чёрным.</h2>
+                <h2>2. Евреям.</h2>
+                <h2>3. Представителям ЛГБТ (и всем сказачным существам, сязанным с ними).</h2>
+              </div>
+              <div class="register_list_background" style="position: absolute; top: 540px; width: 860px">
                 <h1 style="margin: 2px 10px;">За любое нарушение выше перечисленных правил, выдаётся бан.</h1>
               </div>
               <!--<p>4)Российское правительство.</p>-->
@@ -536,6 +545,10 @@
     </div>
 
     <div id="page_chats" class="chats_page">
+      <input type="checkbox" id="newchat_container_checkbox" class="hidden_newchat_container_checkbox">
+      <div id = "newchat_container" class="newchat_container">
+        <h2>NIGGER</h2>
+      </div>
       <div class="vl_chats"></div>
       <table>
         <tr>
@@ -560,22 +573,15 @@
                     <h3>Общий чат</h3>
                   </div>
                 </li>
-                
               </ul>
             </h2>
           </div>
-
-            <a href="javascript:open_page('page_add_chat')"><img class="icon" width="40" height="40" src="static/img/add.svg" style="position: absolute; left: 390px; top: 5px"></a>
-
+            <a href="javascript:newchat_container_show()"><img class="icon" width="40" height="40" src="static/img/add.svg" style="cursor: pointer; position: absolute; left: 390px; top: 5px;"></a>
           </th>
         </tr>
       </table>
-
-      
-      
       <div class="chat_messages_pos">
         <!--<div style="position: absolute; left: 600px"><h1>Nothing</h1></div>-->
-
         <ul id="chat_messages_list">
           <li>
             <div class="message_container">
