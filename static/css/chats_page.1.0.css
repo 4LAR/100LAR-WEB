@@ -131,7 +131,7 @@
 }
 
 .chats_list {
-  overflow: auto; 
+  overflow: auto;
   height: 800px;
 
 }
@@ -158,6 +158,7 @@
   border-radius: 0px;
   width: 1400px;
   position: absolute;
+  display: block;
   transition:0.5s all;
 }
 
@@ -167,6 +168,9 @@
 }
 
 .newchat_container ul {
+  position: absolute;
+  top: 448px;
+  top: 0px;
   height: 0px;
   overflow: hidden;
 
