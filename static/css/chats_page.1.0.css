@@ -167,17 +167,18 @@
   height: 930px;
 }
 
-.newchat_container ul {
+.newchat_container_list {
   position: absolute;
-  top: 448px;
+  left: 448px;
   top: 0px;
   height: 0px;
+  width: 100%;
   overflow: hidden;
 
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
-.hidden_newchat_container_checkbox:checked ~ .newchat_containerr ul {
+.hidden_newchat_container_checkbox:checked ~ .newchat_container_list {
   height: 930px;
   transition: all 0.85s;
 }

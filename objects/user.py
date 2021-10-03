@@ -1,47 +1,25 @@
 # всё древние как говно мамонта
 
 
+class User(UserMixin): # пользователь и его переменные
+    def __init__(self, id, username, password):
+        self.id = id
+        self.username = username
+        self.password = password
 
-class User(UserMixin):
-    def __init__(self,
-        username,
-        password,
-        id,
-        lvl,
-        scoins,
-        inventory,
-        info,
-        news,
-        other,
-        mail,
-        sent_mail,
-        friends,
-        chats,
-        apps,
-        active=True
-    ):
-        self.id = id                # личный индификатор пользователя
-        self.info = info            # информация о пользователе (ip, и другая ересь)
-        self.sent_mail = sent_mail  # - отправленные сообщения
-        self.mail = mail            # полученные сообщения
-        self.other = other          # для будущих обновлений
-        self.username = username    # имя пользователя
-        self.password = password    # пароль пользователя
-        self.lvl = lvl              # уровень доступа
-        self.inventory = inventory  # инвентарь
-        self.news = news            # личный список новостей
-        self.friends = friends      # список друзей
-        self.chats = chats          # список чатов
-        self.apps = apps            # сохранения в приложениях
-        self.scoins = scoins        # кошелёк
-        self.online = online
-        self.active = active
+        self.notifications = []
 
-    def get_id(self):
-        return self.id
+        self.chats = []
+        self.folowers = []
+        self.folow = []
+        self.friends = []
 
-    def get_lvl(self):
-        return self.lvl
+        self.news = []
+
+        self.apps = []
+        self.apps_save = []
+
+        self.active = True
 
     def is_active(self):
         return self.active
@@ -102,6 +80,12 @@ class UsersRepository:
         f.write(str(self.identifier))
         f.close()
         return self.identifier
+
+    def get_user_item_by_id(self, id, item): # я хз как щас это делать (функция должна возвращать значение переменной и если её не существует, то её создавать по образцу)
+        user = None
+        exec('''
+users_repository.get_user_by_id(''' + id + ''')
+        ''')
 
 users_repository = UsersRepository()
 
