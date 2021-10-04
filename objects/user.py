@@ -31,6 +31,9 @@ class User(UserMixin): # пользователь и его переменные
     def is_active(self):
         return self.active
 
+    def get_id(self):
+        return self.id
+
     def get_auth_token(self):
         return make_secure_token(self.username , key='secret_key')
 
@@ -48,6 +51,9 @@ class UsersRepository:
         except:
             self.users_id_dict = dict()
             save_obj(self.users_id_dict, 'users_id' )
+
+        print(self.users)
+        print(self.users_id_dict)
 
         if not os.path.exists("identifier.txt"):
             f = open("identifier.txt", "w")
@@ -129,6 +135,8 @@ def update_name():
                 old_user = current_user
                 new_user = current_user
                 new_user.username = name
+                print(old_user.username)
+                print(new_user.username)
                 users_repository.update_user(old_user, new_user)
                 logout_user()
                 login_user(new_user, remember=True)
@@ -203,6 +211,7 @@ def login():
         password = request.form['password']
         registeredUser = users_repository.get_user(username)
         if registeredUser != None and registeredUser.password == password:
+
             print(username + ' Logged in..')
             login_user(registeredUser, remember=True)
             return 'OK'
@@ -231,8 +240,10 @@ def register_post():
                 if (password == password_replay) and (len(password) > 0):
                     if (len(username) >= 6):
                         new_user = User(users_repository.next_index(), username, password)
+                        print(new_user)
                         users_repository.save_user(new_user)
                         registeredUser = users_repository.get_user(username)
+                        print(registeredUser)
                         login_user(registeredUser, remember=True)
                         return 'OK'
                     else:
