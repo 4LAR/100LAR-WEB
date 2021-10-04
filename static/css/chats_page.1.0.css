@@ -198,3 +198,16 @@
 .newchat_container_close:hover {
   background-color: #434346;
 }
+
+.newchat_input_name {
+  position: absolute;
+
+  color: #808080;
+  border: 0;
+  background-color: #343436;
+  padding: 10px;
+  height: 45px;
+  width: 400px;
+  border-radius: 10px;
+  --transition:0.2s all;
+}
