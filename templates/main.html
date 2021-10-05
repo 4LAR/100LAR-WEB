@@ -116,7 +116,7 @@
         <img width="250" height="250" src="static/img/profile.svg" class = "icon">
         <div class="page_home_profile_information">
           <div class="page_home_profile_information_name">
-            <h1 style="font-size: 3em; margin: 2px 10px">100LAR</h1>
+            <h1 id="home_page_username" style="font-size: 3em; margin: 2px 10px">100LAR</h1>
           </div>
 
           <div class="page_home_profile_information_lvl">
@@ -134,7 +134,7 @@
             <h1 style="margin: -35px 40px">settings<h1>
           </div>
 
-          <div class="page_home_profile_information_button_logout">
+          <div onclick="logout()" class="page_home_profile_information_button_logout">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/logout.svg">
             <h1 style="margin: -35px 40px">logout<h1>
           </div>
@@ -630,18 +630,18 @@
     <input type="checkbox" id="user_container_checkbox" class="hidden_user_container_checkbox">
     <div id="user_container" class="user_container" onclick="user_container_show()">
       <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left">
-      <h2 align="center">GUEST</h2>
+      <h2 id="username_top_bar" align="center">GUEST</h2>
       <ul style="position: fixed;">
         <li>
           <p align="center">
             <div id="user_login_container" class="user_login_container">
-              <input type="text" placeholder="Login" class="login_style_class" style="left: 4px; top: 0px">
-              <input type="password" placeholder="Password" class="login_style_class" style="left: 4px; top: 40px">
+              <input id="login_username" type="text" placeholder="Login" class="login_style_class" style="left: 4px; top: 0px">
+              <input id="login_password" type="password" placeholder="Password" class="login_style_class" style="left: 4px; top: 40px">
               <div id="user_register_container" style="display: none">
                 <input type="password" placeholder="Repeat password" class="login_style_class" style="left: 4px; top: 80px">
               </div>
               <div id="login_buttons_container" style="display: block">
-                <div class="login_button_container">
+                <div onclick="login()" class="login_button_container">
                   <h2 style="margin: 3px 45px;">Login</h2>
                 </div>
                 <div class="register_button_container" onclick="open_page('page_register')">

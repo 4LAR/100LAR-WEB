@@ -1,5 +1,6 @@
 # всё древние как говно мамонта
 
+import copy
 
 class User(UserMixin): # пользователь и его переменные
     def __init__(self, id, username, password):
@@ -132,12 +133,11 @@ def update_name():
     if ok:
         if users_repository.get_user(name) is None:
             if (len(name) >= 6):
-                old_user = current_user
-                new_user = current_user
+                new_user = copy.copy(current_user)
                 new_user.username = name
-                print(old_user.username)
-                print(new_user.username)
-                users_repository.update_user(old_user, new_user)
+                print('UPDATE NAME: ' + current_user.username + ' =>' + new_user.username)
+
+                users_repository.update_user(current_user, new_user)
                 logout_user()
                 login_user(new_user, remember=True)
                 return 'OK'
