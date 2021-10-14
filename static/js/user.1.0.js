@@ -46,12 +46,13 @@ function readName() {
 
           users_buttons(true);
 
-          open_page('page_home');
+          //open_page('page_home');
+          open_page('page_users');
 
         }else{ // если мы не авторизованы
           document.getElementById('username_top_bar').innerHTML = 'GUEST';
           document.getElementById('home_page_username').innerHTML = 'GUEST';
-          
+
           users_buttons(false);
 
           open_page('page_news');
