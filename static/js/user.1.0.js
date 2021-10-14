@@ -9,10 +9,10 @@ function login(name='', password='') {
   xhr.onload = function () {
     if (xhr.status === 200) {
       if (xhr.responseText.toString() == 'OK') {
-        readName();
-        document.getElementById('login_username').value = '';
-        document.getElementById('login_password').value = '';
-        open_page('page_home');
+        //readName();
+        //document.getElementById('login_username').value = '';
+        //document.getElementById('login_password').value = '';
+        location.reload();
       }
     }
 
@@ -24,6 +24,9 @@ readName();
 
 function users_buttons(open=false) {
   var display = (open)? 'block': 'none';
+
+  document.getElementById('notifications_container').style.display = display;
+
   document.getElementById('page_home_button').style.display = display;
   document.getElementById('page_chats_button').style.display = display;
   //document.getElementById('page_home_button').style.display = display;
@@ -43,11 +46,15 @@ function readName() {
 
           users_buttons(true);
 
+          open_page('page_home');
+
         }else{ // если мы не авторизованы
           document.getElementById('username_top_bar').innerHTML = 'GUEST';
           document.getElementById('home_page_username').innerHTML = 'GUEST';
           
           users_buttons(false);
+
+          open_page('page_news');
 
         }
 
@@ -78,7 +85,7 @@ function logout() {
   xhr.onload = function () {
     if (xhr.status === 200) {
       readName();
-      open_page('page_news');
+      location.reload();
     }
   };
   xhr.send()

@@ -3,9 +3,15 @@
   top: 70px;
   position: fixed;
 
-  background-color: #333336;
+  --background-color: #333336;
   height: 100%;
   width: 100%;
+
+  transition:0.2s all;
+}
+
+.users_page table {
+  border-spacing: 10px 0px;
 
   transition:0.2s all;
 }
