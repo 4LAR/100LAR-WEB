@@ -1,0 +1,11 @@
+.users_page {
+  left: 100px;
+  top: 70px;
+  position: fixed;
+
+  background-color: #333336;
+  height: 100%;
+  width: 100%;
+
+  transition:0.2s all;
+}

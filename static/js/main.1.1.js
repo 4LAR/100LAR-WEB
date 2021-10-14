@@ -1,5 +1,5 @@
 
-var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_register', 'page_not_found']; // список доступных страниц
+var page_names = ['page_news', 'page_chats', 'page_home', 'page_settings', 'page_register', 'page_users', 'page_not_found']; // список доступных страниц
 var current_page = "page_home"; // текущая страница
 //var closed_page = "";
 

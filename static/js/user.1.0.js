@@ -12,6 +12,7 @@ function login(name='', password='') {
         readName();
         document.getElementById('login_username').value = '';
         document.getElementById('login_password').value = '';
+        open_page('page_home');
       }
     }
 
@@ -20,6 +21,15 @@ function login(name='', password='') {
 }
 
 readName();
+
+function users_buttons(open=false) {
+  var display = (open)? 'block': 'none';
+  document.getElementById('page_home_button').style.display = display;
+  document.getElementById('page_chats_button').style.display = display;
+  //document.getElementById('page_home_button').style.display = display;
+
+}
+
 function readName() {
   var xhr = new XMLHttpRequest();
     xhr.open('GET', '/user_info', true);
@@ -31,10 +41,14 @@ function readName() {
           document.getElementById('username_top_bar').innerHTML = userArr[1];
           document.getElementById('home_page_username').innerHTML = userArr[1];
 
+          users_buttons(true);
+
         }else{ // если мы не авторизованы
           document.getElementById('username_top_bar').innerHTML = 'GUEST';
           document.getElementById('home_page_username').innerHTML = 'GUEST';
           
+          users_buttons(false);
+
         }
 
       }
@@ -64,6 +78,7 @@ function logout() {
   xhr.onload = function () {
     if (xhr.status === 200) {
       readName();
+      open_page('page_news');
     }
   };
   xhr.send()
