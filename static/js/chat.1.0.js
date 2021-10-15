@@ -15,6 +15,11 @@ function append_to_chat_messages_list(name, message, time) {
 	ul.appendChild(li);
 }
 
+function chat_messages_list_clear() {
+  document.getElementById("chat_messages_list").innerHTML = '';
+}
+
+
 function append_to_chats(name, type) {
 	var ul = document.getElementById("chats_list");
 	var li = document.createElement("li");

@@ -56,9 +56,10 @@
 .user_button_container {
   background-color: #444446;
   border-radius: 5px;
-  width: 300px;
+  width: 130px;
   height: 28px;
   transition:0.2s all;
+  cursor: pointer;
 }
 
 .user_button_container:hover {
@@ -115,5 +116,16 @@
 }
 
 .register_button_container:hover {
+  background-color: #39393C;
+}
+
+.user_info_bar_container {
+  position: absolute;
+  width: 285px;
+  height: 45px;
+
+  left: 8px;
+
+  border-radius: 5px;
   background-color: #39393C;
 }

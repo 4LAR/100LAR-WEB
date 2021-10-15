@@ -33,6 +33,15 @@ function users_buttons(open=false) {
 
 }
 
+var lvl_access = {
+  0: '(BAN)',
+  1: '(A)',
+  2: '(B)',
+  3: '(C)',
+  4: '(CC)',
+  5: '(S)'
+}
+
 function readName() {
   var xhr = new XMLHttpRequest();
     xhr.open('GET', '/user_info', true);
@@ -42,16 +51,23 @@ function readName() {
         if (xhr.responseText != 'ERROR'){ // если мы авторизованы
           var userArr = xhr.responseText.toString().replace(/\n$/, "").split(/\n/);
           document.getElementById('username_top_bar').innerHTML = userArr[1];
-          document.getElementById('home_page_username').innerHTML = userArr[1];
+          document.getElementById('login_li').style.display = 'none';
+          document.getElementById('user_info_li').style.display = 'block';
 
+          document.getElementById('home_page_username').innerHTML = userArr[1];
+          document.getElementById('home_page_id').innerHTML = '#' + ('0000' + userArr[0]).slice(-4);//userArr[0];
+          document.getElementById('home_page_lvl').innerHTML = 'LVL: ' + userArr[2] + ' ' + lvl_access[userArr[2]];
+          document.getElementById('home_page_coins').innerHTML = 'COINS: ' + userArr[3];
           users_buttons(true);
 
-          //open_page('page_home');
-          open_page('page_users');
+          open_page('page_home');
 
         }else{ // если мы не авторизованы
           document.getElementById('username_top_bar').innerHTML = 'GUEST';
           document.getElementById('home_page_username').innerHTML = 'GUEST';
+
+          document.getElementById('login_li').style.display = 'block';
+          document.getElementById('user_info_li').style.display = 'none';
 
           users_buttons(false);
 

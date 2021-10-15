@@ -156,8 +156,14 @@ function open_page(page_name, animation=false){ //функция для пере
     }
     document.getElementById(page_name).style.transition = "0.2s all";
     document.getElementById(page_name).style.left = 100;
+    
     current_page = page_name;
     left_hot_bar();
+
+    if (current_page == 'page_users') {
+      read_users();
+    }
+
   }
 }
 

@@ -31,9 +31,19 @@
 }
 
 .page_home_profile_information_name {
-  width: 450px;
+  width: 310px;
   height: 50px;
   left: -40px;
+  top: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #2C2C2F;
+}
+
+.page_home_profile_information_id {
+  width: 130px;
+  height: 50px;
+  left: 280px;
   top: 15px;
   position: absolute;
   border-radius: 5px;
@@ -108,7 +118,7 @@
   cursor: pointer;
   width: 380px;
   height: 40px;
-  
+
   position: absolute;
   border-radius: 5px;
   background-color: #323235;

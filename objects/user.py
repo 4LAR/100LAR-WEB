@@ -321,6 +321,18 @@ def current_user_info_name():
     else:
         return 'ERROR'
 
+
+@app.route('/profiles_users',methods=['POST', 'GET', 'OPTIONS'])
+def profiles_users():
+     f = open("identifier.txt", "r")
+     kol = int(f.read())
+     f.close()
+     names = ''
+     for id in range(1,kol+1):
+          names += str(id) + ':' + users_repository.get_user_by_id(id).username + ':' + str(users_repository.get_user_by_id(id).lvl) + '\n'
+     return names
+
+
 # callback to reload the user object
 @login_manager.user_loader
 def load_user(userid):

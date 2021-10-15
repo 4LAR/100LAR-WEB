@@ -8,6 +8,7 @@
     <link rel="stylesheet" href = "static/css/user_page.1.0.css"/>
     <link rel="stylesheet" href = "static/css/page_register.1.0.css"/>
     <link rel="stylesheet" href = "static/css/user_container.1.0.css"/>
+    <link rel="stylesheet" href = "static/css/notifications.1.0.css"/>
     <link rel="stylesheet" href = "static/css/settings_page.1.0.css"/>
     <link rel="stylesheet" href = "static/css/chats_page.1.0.css"/>
     <link rel="stylesheet" href = "static/css/page_users.1.0.css"/>
@@ -164,15 +165,18 @@
           <div class="page_home_profile_information_name">
             <h1 id="home_page_username" style="font-size: 3em; margin: 2px 10px">100LAR</h1>
           </div>
+          <div class="page_home_profile_information_id">
+            <h1 id="home_page_id" style="font-size: 3em; margin: 2px 10px">#1488</h1>
+          </div>
 
           <div class="page_home_profile_information_lvl">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/key.svg">
-            <h1 style="margin: -35px 40px">LVL: 1 (A)<h1>
+            <h1 id="home_page_lvl" style="margin: -35px 40px">LVL: 1 (A)<h1>
           </div>
 
           <div class="page_home_profile_information_coins">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/coin.svg">
-            <h1 style="margin: -35px 40px">COINS: 1000<h1>
+            <h1 id="home_page_coins" style="margin: -35px 40px">COINS: 1000<h1>
           </div>
 
           <div class="page_home_profile_information_button_settings">
@@ -678,7 +682,7 @@
       <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left">
       <h2 id="username_top_bar" align="center">GUEST</h2>
       <ul style="position: fixed;">
-        <li>
+        <li id="login_li" style="display: none">
           <p align="center">
             <div id="user_login_container" class="user_login_container">
               <input id="login_username" type="text" placeholder="Login" class="login_style_class" style="left: 4px; top: 0px">
@@ -697,64 +701,71 @@
             </div>
           </p>
         </li>
-        <!--
-        <li>
-          <div class="user_button_container">
-            <table>
+
+        <li id="user_info_li">
+          <div class="user_info_bar_container">
+
+          </div>
+          <div style="height: 50px"></div>
+          <div style="">
+            <table style="border-spacing: 8px 0px;">
               <tr>
-                <th valign="top">
-                  <image class="icon" width="20" height="20" src="static/img/user_icon.svg">
-                </th>
                 <th>
-                  <p>profile</p>
+                  <div class="user_button_container" onclick="open_page('page_home')">
+                    <table>
+                      <tr>
+                        <th valign="top">
+                          <image class="icon" width="20" height="20" src="static/img/user_icon.svg">
+                        </th>
+                        <th>
+                          <p>profile</p>
+                        </th>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="user_button_container">
+                    <table>
+                      <tr>
+                        <th valign="top">
+                          <image style="margin: 2px 0px" class="icon" width="20" height="20" src="static/img/settings_icon.svg">
+                        </th>
+                        <th>
+                          <p>settings</p>
+                        </th>
+                      </tr>
+                    </table>
+                  </div>
+                </th>
+                <th valign="bottom" align="right">
+                  <div class="user_button_container" style="margin: 0px 12px" onclick="logout()">
+                    <table>
+                      <tr>
+                        <th>
+                          <p>logout</p>
+                        </th>
+                        <th valign="top">
+                          <image style="margin: 2px 0px" class="icon" width="20" height="20" src="static/img/logout.svg">
+                        </th>
+                      </tr>
+                    </table>
+                  </div>
                 </th>
               </tr>
             </table>
           </div>
         </li>
-        <li>
-          <div class="user_button_container">
-            <table>
-              <tr>
-                <th valign="top">
-                  <image class="icon" width="20" height="20" src="static/img/settings_icon.svg">
-                </th>
-                <th>
-                  <p>settings</p>
-                </th>
-              </tr>
-            </table>
-          </div>
-        </li>
-      -->
+
+
       </ul>
     </div>
     <div onclick="user_container_close()" class="user_container_close"></div>
 
     <input type="checkbox" id="notifications_container_checkbox" class="hidden_notifications_container_checkbox">
     <div id="notifications_container" class="mail_container" onclick="notifications_container_show()">
-      <!--<a align="center" href = "javascript:open_page('page_mail')">-->
       <img class="icon" width="60" height="60"s src = "static/img/mail.svg" style="float: left; margin-left: 10;">
-      <!--</a>-->
       <h2 align="center"><span>NOTIFICATIONS</span></h2>
+      <ul id="notifications_list" class="notifications_ul_backgraund" style="position: fixed; margin-top: 0px; overflow: scroll; overflow-x: hidden;">
 
-
-
-      <ul style="position: fixed;">
-        <li>
-          <div class="mail_message_container">
-            <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left; margin-left: 0;">
-            <h3>100LAR</h3>
-            <p align="center">Добро пожаловать на борт!</p>
-          </div>
-        </li>
-        <li>
-          <div class="mail_message_container">
-            <img class="icon" width="60" height="60"s src = "static/img/profile.svg" style="float: left; margin-left: 0;">
-            <h3>Stone BOT</h3>
-            <p align="center">Здесь будут показаны последние сообщения.</p>
-          </div>
-        </li>
       </ul>
     </div>
     <div onclick="notifications_container_close()" class="mail_container_close"></div>
@@ -876,5 +887,6 @@
   <script type="text/javascript" src="static/js/news.1.0.js"></script>
   <script type="text/javascript" src="static/js/user.1.0.js"></script>
   <script type="text/javascript" src="static/js/users.1.0.js"></script>
+  <script type="text/javascript" src="static/js/notifications.1.0.js"></script>
 
 </html>

@@ -1,0 +1,109 @@
+.hidden_notifications_container_checkbox {
+  display: none;
+}
+
+.mail_container {
+  cursor: pointer;
+  left: 1155px;
+  top: 0px;
+  height: 60px;
+  background-color: #444446;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  transition:0.5s all;
+}
+
+.mail_container_close {
+  display: none;
+  cursor: pointer;
+  left: 1015px;
+  top: 0px;
+  height: 60px;
+  opacity: 0;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  transition:0.5s all;
+}
+
+.hidden_notifications_container_checkbox:checked ~ .mail_container_close {
+  display: block;
+
+  border-radius: 5px;
+  width: 580px;
+}
+
+.hidden_notifications_container_checkbox:checked ~ .mail_container {
+  cursor: default;
+  left: 1015px;
+  top: 0px;
+  background-color: #444446;
+  border-radius: 5px;
+  width: 580px;
+  height: 380px;
+}
+
+.mail_container li {
+  margin-bottom: -0.5em;
+}
+
+.notifications_ul_backgraund::-webkit-scrollbar {
+  display: none;
+}
+
+.mail_container ul {
+  height: 0px;
+  overflow: hidden;
+  width: 280px;
+  transition: all 0.5s;
+  margin-left: 15;
+
+  left: 1155px;
+  top: 65px;
+}
+
+.hidden_notifications_container_checkbox:checked ~ .mail_container ul {
+  height: 305px;
+  width: 560px;
+  margin-left: 10;
+  transition: all 0.5s;
+  left: 1015px;
+}
+
+.mail_message_container {
+  position: relative;
+  --margin-top: -10;
+  --margin-left: 0;
+  --padding-left: 0;
+  background-color: #39393C;
+  border-radius: 5px;
+  height: 60px;
+  width: 560px;
+  transition: all 0.3s;
+}
+
+.mail_message_container h2 {
+  position: absolute;
+  left: 70px;
+  top: -10px;
+}
+
+.mail_message_container h3 {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+}
+
+.mail_message_container p {
+  position: absolute;
+  right: 10px;
+  margin: -50px 0px;
+}
+
+.notifications_ul_backgraund {
+  position: absolute;
+
+  background-color: #333336;
+  border-radius: 5px;
+}

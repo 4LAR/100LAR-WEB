@@ -47,7 +47,7 @@
 .users_countainer_information_lvl {
   width: 250px;
   height: 35px;
-  left: 175px;
+  left: 170px;
   top: 85px;
   position: absolute;
   border-radius: 5px;
@@ -57,7 +57,7 @@
 .users_countainer_information_xz {
   width: 250px;
   height: 90px;
-  left: 175px;
+  left: 170px;
   top: 130px;
   --top: 190px;
   position: absolute;
