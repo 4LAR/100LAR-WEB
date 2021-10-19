@@ -87,32 +87,42 @@ function register(name='', password='', password_replay='') {
     var name = document.getElementById('register_page_username').value;
     var password = document.getElementById('register_page_password').value;
     var password_replay = document.getElementById('register_page_password_replay').value;
+
+
+
   }
-  xhr = new XMLHttpRequest();
-  xhr.open('POST', '/register');
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      if (xhr.responseText == 'OK') {
-        location.reload();
-      }  
-      if (xhr.responseText == 'ERROR USERNAME') {
+  if (document.getElementById('rule_checkbox').checked) {
+    xhr = new XMLHttpRequest();
+    xhr.open('POST', '/register');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        if (xhr.responseText == 'OK') {
+          location.reload();
+        } else {
+          openModal('alert_register');
+        }
+        if (xhr.responseText == 'ERROR USERNAME') {
+          document.getElementById('alert_register_text').innerHTML = "Слишком короткое имя профиля.";
+        }
+        if (xhr.responseText == 'ERROR PASSWORD') {
+          document.getElementById('alert_register_text').innerHTML = "Пароли не совпадают.";
+        }
+        if (xhr.responseText == 'ERROR REGISTER') {
+          document.getElementById('alert_register_text').innerHTML = "Пользователь с таким именем уже существует.";
+        }
+        if (xhr.responseText == 'ERROR USERNAME S') {
+          document.getElementById('alert_register_text').innerHTML = "Имя профиля содержит недопустимые символы (|\/.,?<>{}%#@^&*: )";
+        }
 
-      } 
-      if (xhr.responseText == 'ERROR PASSWORD') {
+      }
 
-      } 
-      if (xhr.responseText == 'ERROR REGISTER') {
-
-      } 
-      if (xhr.responseText == 'ERROR USERNAME S') {
-
-      } 
-      
     }
-
+    xhr.send(encodeURI('username=' + name + '&password=' + password + '&password_replay=' + password_replay));
+  } else {
+    openModal('alert_register');
+    document.getElementById('alert_register_text').innerHTML = "Вы не приняли правила данного сайта.";
   }
-  xhr.send(encodeURI('username=' + name + '&password=' + password + '&password_replay=' + password_replay));
 }
 
 function logout() {

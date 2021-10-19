@@ -4,6 +4,7 @@
   position: fixed;
 
   --background-color: #333336;
+  overflow: scroll;
   height: 100%;
   width: 100%;
 
