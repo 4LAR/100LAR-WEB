@@ -83,12 +83,32 @@ function readName() {
 
 
 function register(name='', password='', password_replay='') {
+  if (name.length < 1){
+    var name = document.getElementById('register_page_username').value;
+    var password = document.getElementById('register_page_password').value;
+    var password_replay = document.getElementById('register_page_password_replay').value;
+  }
   xhr = new XMLHttpRequest();
   xhr.open('POST', '/register');
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.onload = function () {
     if (xhr.status === 200) {
-      alert(xhr.responseText.toString())
+      if (xhr.responseText == 'OK') {
+        location.reload();
+      }  
+      if (xhr.responseText == 'ERROR USERNAME') {
+
+      } 
+      if (xhr.responseText == 'ERROR PASSWORD') {
+
+      } 
+      if (xhr.responseText == 'ERROR REGISTER') {
+
+      } 
+      if (xhr.responseText == 'ERROR USERNAME S') {
+
+      } 
+      
     }
 
   }

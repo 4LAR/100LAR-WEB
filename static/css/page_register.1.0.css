@@ -32,6 +32,13 @@
   --transition:0.2s all;
 }
 
+.register_pointer_green {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #404040;
+}
+
 .register_page_button_container {
   cursor: pointer;
   position: absolute;
