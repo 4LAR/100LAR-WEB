@@ -32,3 +32,24 @@
   height: 35px;
   transition:0.2s all;
 }
+.bug_report_input_container {
+  color: #808080;
+  border: 0;
+  background-color: #36363A;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 5px;
+  width: 1000px;
+}
+
+.submit_button_container{
+  cursor: pointer;
+  position: absolute;
+  background-color: #3A3A3F;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  transition:0.2s all;
+  left: 30px;
+  top: 780px;
+}

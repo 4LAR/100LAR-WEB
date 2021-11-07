@@ -14,7 +14,6 @@
     <link rel="stylesheet" href = "static/css/page_users.1.0.css"/>
 
     <link rel="stylesheet" href = "static/css/slider.css"/>
-
   </head>
 
   <div class="background"></div>
@@ -149,7 +148,7 @@
         <h1 align="center">Functions</h1>
         <div class="home_page_settings_button" style="left: 10px; top: 80px;">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/coin.svg">
-            <h1 style="margin: -35px 40px">Send coins<h1>
+            <h1 style="margin: -35px 40px">Send coins</h1>
           </div>
       </div>
 
@@ -157,11 +156,11 @@
         <h1 align="center">Other information</h1>
         <div class="page_home_profile_information_folowers">
           <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/folowers.svg">
-          <h1 style="margin: -35px 40px">FOLOWERS: 0<h1>
+          <h1 style="margin: -35px 40px">FOLOWERS: 0</h1>
         </div>
         <div class="page_home_profile_information_friends">
           <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/folowers.svg">
-          <h1 style="margin: -35px 40px">FRIENDS: 0<h1>
+          <h1 style="margin: -35px 40px">FRIENDS: 0</h1>
         </div>
       </div>
 
@@ -177,22 +176,22 @@
 
           <div class="page_home_profile_information_lvl">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/key.svg">
-            <h1 id="home_page_lvl" style="margin: -35px 40px">LVL: 1 (A)<h1>
+            <h1 id="home_page_lvl" style="margin: -35px 40px">LVL: 1 (A)</h1>
           </div>
 
           <div class="page_home_profile_information_coins">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/coin.svg">
-            <h1 id="home_page_coins" style="margin: -35px 40px">COINS: 1000<h1>
+            <h1 id="home_page_coins" style="margin: -35px 40px">COINS: 1000</h1>
           </div>
 
           <div class="page_home_profile_information_button_settings">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/gear.svg">
-            <h1 style="margin: -35px 40px">settings<h1>
+            <h1 style="margin: -35px 40px">settings</h1>
           </div>
 
           <div onclick="logout()" class="page_home_profile_information_button_logout">
             <image style="margin: 5px 5px;" class="icon" width="30" height="30" src="static/img/logout.svg">
-            <h1 style="margin: -35px 40px">logout<h1>
+            <h1 style="margin: -35px 40px">logout</h1>
           </div>
 
           <div class="page_home_profile_information_xz">
@@ -399,21 +398,38 @@
                   <div class="settings_list_background" style="width: 200px; height: 40px; top: 100px; left: 100px;">
                     <h2 style="margin: 5px 5px">Светлая тема</h2>
                   </div>
-
                 </div>
               </th>
               <th valign="top">
-
-
-
-                </div>
               </th>
             </tr>
           </table>
         </li>
       </ul>
-
     </div>
+
+    <div id="page_bug_report" class="settings_page">
+      <ul>
+        <li>
+          <table>
+            <tr>
+              <th valign="top">
+                <div class="news_container_2_nohover" style="height: 800px; width: 1000px">
+                  <input class="bug_report_input_container" type=text placeholder="Title...">
+                  <textarea  class="bug_report_input_container" type=text placeholder="Text of problem..." rows="10" cols="20"></textarea>
+                </div>
+                <div class="submit_button_container" onclick="settings_container_submit()">
+                  <h2 style="margin: 5px 0px;">Submit</h2>
+                </div>
+              </th>
+              <th valign="top">
+              </th>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+
 
     <div id="page_news" class="news_page">
       <ul>
@@ -623,7 +639,7 @@
                 <li>
                   <div class="chats_names_list">
                     <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
-                    <h2>100LAR</h1>
+                    <h2>100LAR</h2>
                     <h3>Диалог</h3>
                   </div>
                 </li>
@@ -631,7 +647,7 @@
                 <li>
                   <div class="chats_names_list">
                     <image style="float: left" class="icon" width="60" height="60" src="static/img/profile.svg">
-                    <h2>ALL</h1>
+                    <h2>ALL</h2>
                     <h3>Общий чат</h3>
                   </div>
                 </li>
@@ -648,7 +664,7 @@
           <li>
             <div class="message_container">
               <image class="icon" width="60" height="60" src="static/img/profile.svg">
-              <h2 class="message_username_class">100LAR</h1>
+              <h2 class="message_username_class">100LAR</h2>
               <h3 class="message_text_class">HELLO WORLD test message</h3>
               <p class="message_time_class  ">9:52 09.09.2021</p>
             </div>
@@ -851,6 +867,20 @@
             </th>
             <th>
               <h2>SETTINGS</h2>
+            </th>
+          </tr>
+        </table></p>
+      </a>
+    </div>
+    <div class="left_hotbar_bag_report_button_container" style="position: absolute; top: 830px">
+      <a id="page_bug_report_button" href = "javascript:open_page('page_bug_report')" class="nodecoration">
+        <p><table class="left_hotbar_button_container">
+          <tr>
+            <th>
+              <img class="icon" width="60" height="60"s src = "static/img/settings.svg">
+            </th>
+            <th>
+              <h2>BUG REPORT</h2>
             </th>
           </tr>
         </table></p>
