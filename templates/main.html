@@ -414,12 +414,23 @@
           <table>
             <tr>
               <th valign="top">
-                <div class="news_container_2_nohover" style="height: 800px; width: 1000px">
+                <p>
+                  В баг репортах нужно максимально коротко и понятно описать баг или проблему.
+                </p>
+                <div class="news_container_2_nohover" style="height: 760px; width:1000px">
+                  <p><select name="select_problem" style="color: #808080; background-color: #36363A">
+                    <option value="support_sel">Обращение в техподдержку</option>
+                    <option value="bug_report_sel">Баг репорт</option>
+                  </select></p>
+                  <input class="bug_report_input_container" type=text placeholder="Email...">
                   <input class="bug_report_input_container" type=text placeholder="Title...">
-                  <textarea  class="bug_report_input_container" type=text placeholder="Text of problem..." rows="10" cols="20"></textarea>
+                  <textarea  class="bug_report_input_container" type=text placeholder="Text of problem..." rows="30" cols="20"></textarea>
                 </div>
                 <div class="submit_button_container" onclick="settings_container_submit()">
                   <h2 style="margin: 5px 0px;">Submit</h2>
+                </div>
+                <div class="attach_report_button_container" onclick="settings_container_submit()">
+                  <h2 style="margin: 10px 0px;">Attach image</h2>
                 </div>
               </th>
               <th valign="top">
